@@ -1,0 +1,31 @@
+schema_version: "1.0"
+name: cognitive-analysis-tools-workflow
+goal: "Select the smallest useful set of models and convert analysis into action."
+preconditions:
+  - "The core problem has been defined."
+  - "There is a specific need for deeper reasoning."
+steps:
+  - id: classify
+    purpose: "Identify task type: cognition, decision, system, uncertainty, feedback, growth, or mixed."
+    checkpoint: "The analysis need is explicit."
+    artifact: "task_type"
+  - id: select_models
+    purpose: "Pick one to three models that directly attack the key contradiction."
+    checkpoint: "Each selected model has a reason tied to the task facts."
+    artifact: "selected_models"
+  - id: apply_to_facts
+    purpose: "Apply each model to facts, assumptions, and constraints."
+    checkpoint: "The model is not treated as proof."
+    artifact: "model_findings"
+  - id: compare_or_update
+    purpose: "Compare options, update beliefs, or diagnose the system depending on the task."
+    checkpoint: "The result changes a decision, estimate, or action."
+    artifact: "analysis_result"
+  - id: convert_to_action
+    purpose: "Turn insight into a decision, test, next step, or verification plan."
+    checkpoint: "The output is actionable and checkable."
+    artifact: "next_action"
+guardrails:
+  - "Use models as tools, not as labels."
+  - "Do not exceed three models unless explicitly justified."
+  - "Return to the core operating loop after analysis."

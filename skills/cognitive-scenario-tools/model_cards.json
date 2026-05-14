@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.0",
+  "models": [
+    {
+      "id": 25,
+      "name": "Tragedy of the Commons",
+      "scenario": "shared_resources_and_organizations",
+      "use_when": "Individual rational choices damage a shared resource.",
+      "action_rule": "Look for missing ownership, missing cost feedback, or weak governance."
+    },
+    {
+      "id": 28,
+      "name": "Rent Dissipation",
+      "scenario": "shared_resources_and_organizations",
+      "use_when": "People compete away the value of a resource.",
+      "action_rule": "Check whether the contest costs more than the prize is worth."
+    },
+    {
+      "id": 34,
+      "name": "Prisoner's Dilemma",
+      "scenario": "negotiation_and_cooperation",
+      "use_when": "Mutual cooperation would be better but incentives push each side toward betrayal or defensiveness.",
+      "action_rule": "Use small commitments, repeated interaction, and trust tests to make cooperation safer."
+    },
+    {
+      "id": 35,
+      "name": "Information Asymmetry",
+      "scenario": "relationship_and_communication",
+      "use_when": "One side knows more than the other.",
+      "action_rule": "Identify hidden information, screening mechanisms, and verification signals."
+    },
+    {
+      "id": 36,
+      "name": "Signal Theory",
+      "scenario": "relationship_and_communication",
+      "use_when": "Words are cheap but actions may reveal intent.",
+      "action_rule": "Look for costly signals, consistency, and incentives behind communication."
+    },
+    {
+      "id": 37,
+      "name": "Zero-Sum and Non-Zero-Sum Games",
+      "scenario": "negotiation_and_cooperation",
+      "use_when": "It is unclear whether parties compete for a fixed pie or can expand it.",
+      "action_rule": "Identify whether cooperation can create new value before assuming conflict."
+    },
+    {
+      "id": 45,
+      "name": "Asymmetric Warfare",
+      "scenario": "competition_and_strategy",
+      "use_when": "Facing a stronger opponent or constraint.",
+      "action_rule": "Avoid head-on competition; use unique advantages against the other side's weak point."
+    },
+    {
+      "id": 48,
+      "name": "Double Bind",
+      "scenario": "relationship_and_communication",
+      "use_when": "Every available response seems wrong because demands conflict.",
+      "action_rule": "Move to meta-level clarification and name the contradictory demands."
+    },
+    {
+      "id": 49,
+      "name": "Control Dichotomy",
+      "scenario": "personal_growth",
+      "use_when": "Anxiety comes from trying to control the uncontrollable.",
+      "action_rule": "Separate controllable actions from uncontrollable outcomes."
+    },
+    {
+      "id": 50,
+      "name": "Influence Circle",
+      "scenario": "personal_growth",
+      "use_when": "Attention is wasted on issues outside practical influence.",
+      "action_rule": "Move energy from concern to influence to direct control."
+    }
+  ]
+}

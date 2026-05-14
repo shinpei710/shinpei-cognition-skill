@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.0",
+  "examples": [
+    {
+      "id": "relationship-late-reply",
+      "input": "They replied late, so they probably don't care. What should I say?",
+      "scenario": "relationship_and_communication",
+      "selected_models": [
+        "Signal Theory",
+        "Information Asymmetry",
+        "Control Dichotomy"
+      ],
+      "expected_behavior": [
+        "Separate late reply as fact from motive as interpretation.",
+        "Offer alternative explanations.",
+        "Avoid mind-reading.",
+        "Suggest a small, clear message that tests reality."
+      ]
+    },
+    {
+      "id": "team-shared-resource",
+      "input": "Everyone wants the shared design team to prioritize their project first.",
+      "scenario": "shared_resources_and_organizations",
+      "selected_models": [
+        "Tragedy of the Commons",
+        "Bottleneck Theory",
+        "Feedback Loop"
+      ],
+      "expected_behavior": [
+        "Identify the shared capacity constraint.",
+        "Name missing prioritization or cost feedback.",
+        "Suggest a queue, ownership, or allocation rule."
+      ]
+    }
+  ]
+}

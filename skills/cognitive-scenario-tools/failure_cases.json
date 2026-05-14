@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.0",
+  "failure_cases": [
+    {
+      "id": "hostility-overfit",
+      "symptom": "The response assumes adversarial intent without enough evidence.",
+      "risk": "The user escalates a situation unnecessarily.",
+      "recovery": "Use Hanlon-style alternatives, information asymmetry, and a clarification action."
+    },
+    {
+      "id": "signal-as-proof",
+      "symptom": "A repeated or costly signal is treated as a guarantee.",
+      "risk": "The user over-commits to a fragile interpretation.",
+      "recovery": "State signal strength, uncertainty, alternatives, and a verification step."
+    },
+    {
+      "id": "control-confusion",
+      "symptom": "The response tries to control another person's reaction.",
+      "risk": "The user invests effort in an uncontrollable outcome.",
+      "recovery": "Separate direct control, influence, and concern; choose an action in the first two zones."
+    },
+    {
+      "id": "scenario-label-as-excuse",
+      "symptom": "A label like double bind or prisoner's dilemma is used to avoid a hard choice.",
+      "risk": "The user gets explanation without movement.",
+      "recovery": "Name the tradeoff and choose the smallest action that changes information or constraints."
+    }
+  ]
+}

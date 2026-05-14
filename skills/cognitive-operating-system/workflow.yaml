@@ -1,0 +1,40 @@
+schema_version: "1.0"
+name: cognitive-operating-system-workflow
+goal: "Convert a user request into calibrated, verifiable action."
+steps:
+  - id: define
+    purpose: "State the real problem, desired outcome, success criteria, scope, and constraints."
+    checkpoint: "A reader can tell what success means before execution starts."
+    artifact: "problem_definition"
+  - id: calibrate
+    purpose: "Separate facts, assumptions, unknowns, risks, emotions, and decisions."
+    checkpoint: "Unsupported claims are marked as assumptions or unknowns."
+    artifact: "calibration"
+  - id: frame
+    purpose: "Identify stage, dependencies, key variables, and the highest-weight contradiction."
+    checkpoint: "The plan focuses on the main bottleneck instead of treating all factors equally."
+    artifact: "key_contradiction"
+  - id: choose
+    purpose: "Compare viable routes and select the lowest-risk path that can produce evidence."
+    checkpoint: "The chosen path is reversible or bounded when uncertainty is high."
+    artifact: "chosen_path"
+  - id: execute
+    purpose: "Perform the selected action in clear, inspectable steps."
+    checkpoint: "Each action creates an observable output."
+    artifact: "actions"
+  - id: verify
+    purpose: "Check the result against success criteria and look for side effects."
+    checkpoint: "The answer reports what was verified and what remains uncertain."
+    artifact: "verification"
+  - id: reflect
+    purpose: "Identify wrong assumptions, useful patterns, and remaining risks."
+    checkpoint: "The next iteration is clearer than the previous one."
+    artifact: "retrospective_notes"
+  - id: preserve
+    purpose: "Convert reusable learning into rules, templates, checklists, or examples."
+    checkpoint: "The module or project gains a reusable asset when appropriate."
+    artifact: "preserved_learning"
+exit_conditions:
+  - "Success criteria are met."
+  - "A blocker is verified and reported with a concrete next action."
+  - "Risk becomes high enough that user confirmation is required before proceeding."

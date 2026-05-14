@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0",
+  "module": "cognitive-scenario-tools",
+  "version": "0.2.0",
+  "status": "draft",
+  "updated_at": "2026-05-14",
+  "changes": [
+    {
+      "version": "0.2.0",
+      "date": "2026-05-14",
+      "summary": "Added structured resources and a machine-readable scenario model catalog."
+    },
+    {
+      "version": "0.1.0",
+      "date": "2026-05-11",
+      "summary": "Initial scenario-specific cognitive toolbox."
+    }
+  ]
+}

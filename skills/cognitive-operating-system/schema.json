@@ -1,0 +1,103 @@
+{
+  "schema_version": "1.0",
+  "title": "Cognitive Operating System Contract",
+  "input_schema": {
+    "type": "object",
+    "required": ["task"],
+    "properties": {
+      "task": {
+        "type": "string",
+        "description": "The user's visible request or problem statement."
+      },
+      "desired_outcome": {
+        "type": "string",
+        "description": "What should become true if the task succeeds."
+      },
+      "success_criteria": {
+        "type": "array",
+        "items": { "type": "string" },
+        "description": "Observable standards used to verify success."
+      },
+      "known_facts": {
+        "type": "array",
+        "items": { "type": "string" }
+      },
+      "assumptions": {
+        "type": "array",
+        "items": { "type": "string" }
+      },
+      "unknowns": {
+        "type": "array",
+        "items": { "type": "string" }
+      },
+      "constraints": {
+        "type": "array",
+        "items": { "type": "string" }
+      },
+      "risks": {
+        "type": "array",
+        "items": { "type": "string" }
+      },
+      "stage": {
+        "type": "string",
+        "enum": ["exploration", "planning", "execution", "verification", "iteration", "unknown"]
+      }
+    }
+  },
+  "output_schema": {
+    "type": "object",
+    "required": ["problem_definition", "chosen_path", "verification"],
+    "properties": {
+      "problem_definition": {
+        "type": "object",
+        "required": ["goal", "success_criteria"],
+        "properties": {
+          "goal": { "type": "string" },
+          "success_criteria": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "scope": { "type": "string" }
+        }
+      },
+      "calibration": {
+        "type": "object",
+        "properties": {
+          "facts": { "type": "array", "items": { "type": "string" } },
+          "assumptions": { "type": "array", "items": { "type": "string" } },
+          "unknowns": { "type": "array", "items": { "type": "string" } },
+          "risks": { "type": "array", "items": { "type": "string" } }
+        }
+      },
+      "key_contradiction": {
+        "type": "string",
+        "description": "The highest-weight bottleneck or tension."
+      },
+      "chosen_path": {
+        "type": "string",
+        "description": "The lowest-risk viable route selected for action."
+      },
+      "actions": {
+        "type": "array",
+        "items": { "type": "string" }
+      },
+      "verification": {
+        "type": "object",
+        "required": ["method"],
+        "properties": {
+          "method": { "type": "string" },
+          "result": { "type": "string" },
+          "side_effects_checked": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        }
+      },
+      "preserved_learning": {
+        "type": "array",
+        "items": { "type": "string" },
+        "description": "Rules, templates, checklists, or reusable observations created from the work."
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.0",
+  "failure_cases": [
+    {
+      "id": "model-name-decoration",
+      "symptom": "The response names models but does not use them to reason.",
+      "risk": "The answer sounds sophisticated without improving decisions.",
+      "recovery": "For each model, require a finding, evidence, limit, and next action."
+    },
+    {
+      "id": "over-selection",
+      "symptom": "The response loads too many models.",
+      "risk": "The main contradiction is buried.",
+      "recovery": "Cut the list to one to three models that directly affect the decision."
+    },
+    {
+      "id": "model-as-proof",
+      "symptom": "The response treats a model as evidence.",
+      "risk": "Reality is replaced by a neat explanation.",
+      "recovery": "Separate the model's hypothesis from observed facts and define a test."
+    },
+    {
+      "id": "analysis-without-handoff",
+      "symptom": "The answer never returns to execution or verification.",
+      "risk": "Reasoning does not produce progress.",
+      "recovery": "End with a decision, test, or next action and hand back to the core loop."
+    }
+  ]
+}

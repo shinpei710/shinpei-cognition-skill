@@ -1,0 +1,53 @@
+{
+  "schema_version": "1.0",
+  "activate_when": [
+    "The core problem has been defined and the domain is concrete and human-facing.",
+    "Relationship, negotiation, communication, cooperation, organization, personal growth, or public expression dynamics shape the next action.",
+    "General analysis needs scenario-specific rules about signals, incentives, control, or influence."
+  ],
+  "do_not_activate_when": [
+    "The issue is purely technical, mechanical, or factual.",
+    "There is not enough context to identify a scenario and a safe assumption would be misleading.",
+    "The user is using a scenario label to justify unsupported certainty."
+  ],
+  "routing": [
+    {
+      "scenario": "relationship_and_communication",
+      "models": ["Signal Theory", "Information Asymmetry", "Double Bind", "Framing Effect", "Control Dichotomy"]
+    },
+    {
+      "scenario": "negotiation_and_cooperation",
+      "models": ["Prisoner's Dilemma", "Zero-Sum and Non-Zero-Sum Games", "Signal Theory", "Opportunity Cost", "Safety Margin"]
+    },
+    {
+      "scenario": "shared_resources_and_organizations",
+      "models": ["Tragedy of the Commons", "Rent Dissipation", "Bottleneck Theory", "Feedback Loop", "Path Dependence"]
+    },
+    {
+      "scenario": "competition_and_strategy",
+      "models": ["Asymmetric Warfare", "Ability Circle", "Safety Margin", "Black Swan", "Antifragility"]
+    },
+    {
+      "scenario": "personal_growth",
+      "models": ["Comfort Zone", "Influence Circle", "Compound Effect", "Capability Emergence", "Hyperbolic Discounting"]
+    },
+    {
+      "scenario": "public_expression_and_persuasion",
+      "models": ["Framing Effect", "Signal Theory", "Map Is Not Territory", "Appeal to Authority", "Confirmation Bias"]
+    }
+  ],
+  "required_output_fields": [
+    "facts_observed",
+    "models_used",
+    "strongest_interpretation",
+    "plausible_alternatives",
+    "risk_of_over_inference",
+    "next_verifiable_action"
+  ],
+  "red_flags": [
+    "A signal is treated as a guarantee.",
+    "Game theory is used to assume hostility.",
+    "The answer tries to control an outcome instead of choosing controllable action.",
+    "The scenario model becomes an excuse for over-inference."
+  ]
+}

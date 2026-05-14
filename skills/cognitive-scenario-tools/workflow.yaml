@@ -1,0 +1,35 @@
+schema_version: "1.0"
+name: cognitive-scenario-tools-workflow
+goal: "Route a concrete human or social scenario to a small set of useful lenses and a verifiable action."
+preconditions:
+  - "The core problem has been defined."
+  - "The scenario domain is relevant to the next action."
+steps:
+  - id: separate_layers
+    purpose: "Separate observed facts, interpretations, emotions, and desired actions."
+    checkpoint: "No interpretation is presented as an observed fact."
+    artifact: "fact_interpretation_split"
+  - id: route_scenario
+    purpose: "Classify the scenario domain."
+    checkpoint: "The selected domain explains why scenario tools are needed."
+    artifact: "scenario"
+  - id: select_models
+    purpose: "Pick one to three scenario models."
+    checkpoint: "Models are tied to facts and incentives, not vague vibes."
+    artifact: "models_used"
+  - id: generate_interpretations
+    purpose: "Name the strongest interpretation and plausible alternatives."
+    checkpoint: "At least one alternative explanation is considered when evidence is incomplete."
+    artifact: "interpretation_set"
+  - id: assess_over_inference
+    purpose: "Estimate whether the conclusion exceeds available evidence."
+    checkpoint: "High over-inference blocks strong claims."
+    artifact: "over_inference_risk"
+  - id: choose_action
+    purpose: "Choose a small action that tests reality or improves the situation."
+    checkpoint: "The action is within the user's control or influence."
+    artifact: "next_verifiable_action"
+guardrails:
+  - "Do not infer intent from weak signals without alternatives."
+  - "Do not use adversarial models as default explanations."
+  - "Separate controllable actions from uncontrollable outcomes."

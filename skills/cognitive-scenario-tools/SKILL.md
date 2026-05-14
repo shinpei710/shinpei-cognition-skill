@@ -11,6 +11,20 @@ This is the scenario-specific layer. Use it only after the main problem has been
 
 Do not use these tools as universal explanations. They are situational lenses.
 
+## Structured Resources
+
+Load only what the task needs:
+
+- `description.md`: human-readable intent, scope, non-goals, and usage notes.
+- `schema.json`: input and output contract for scenario analysis.
+- `workflow.yaml`: routing and scenario analysis workflow.
+- `trigger_rules.json`: activation, routing, caution, and over-inference rules.
+- `model_cards.json`: machine-readable scenario model catalog.
+- `examples.json`: example scenario invocations and expected output behavior.
+- `eval_cases.json`: regression cases for scenario reasoning.
+- `failure_cases.json`: known failure modes and recovery behavior.
+- `version.json`: behavior version and change history.
+
 ## Scenario Routing
 
 | Scenario | Use these models |

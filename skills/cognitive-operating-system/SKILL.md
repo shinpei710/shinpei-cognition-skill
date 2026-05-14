@@ -9,6 +9,19 @@ description: Use when a task is complex, vague, high-impact, emotionally loaded,
 
 This skill is the lightweight core constraint for doing work. It keeps the agent from becoming a blind executor: define the problem, check assumptions, identify the key contradiction, act with a minimal viable path, verify reality, and improve through feedback.
 
+## Structured Resources
+
+Load only what the task needs:
+
+- `description.md`: human-readable intent, scope, non-goals, and usage notes.
+- `schema.json`: input, output, evidence, and preservation contract.
+- `workflow.yaml`: execution loop with checkpoints and artifacts.
+- `trigger_rules.json`: activation, escalation, caution, and over-inference rules.
+- `examples.json`: example invocations and expected response shape.
+- `eval_cases.json`: regression cases for behavior checks.
+- `failure_cases.json`: known failure modes and recovery behavior.
+- `version.json`: behavior version and change history.
+
 ## Core Principles
 
 1. **Problem before action**: define the real problem, user goal, success criteria, constraints, facts, unknowns, and risks before execution.

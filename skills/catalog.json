@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0",
+  "repository": "shinpei710/shinpei-cognition-skill",
+  "module_standard": "docs/module-spec.md",
+  "updated_at": "2026-05-14",
+  "modules": [
+    {
+      "name": "cognitive-operating-system",
+      "layer": 1,
+      "role": "core_operating_constraint",
+      "path": "skills/cognitive-operating-system",
+      "entrypoint": "SKILL.md",
+      "resources": [
+        "description.md",
+        "schema.json",
+        "workflow.yaml",
+        "trigger_rules.json",
+        "examples.json",
+        "eval_cases.json",
+        "failure_cases.json",
+        "version.json"
+      ],
+      "load_policy": "Load first for complex, vague, high-impact, emotionally loaded, or reasoning-heavy tasks."
+    },
+    {
+      "name": "cognitive-analysis-tools",
+      "layer": 2,
+      "role": "general_analysis_toolbox",
+      "path": "skills/cognitive-analysis-tools",
+      "entrypoint": "SKILL.md",
+      "resources": [
+        "description.md",
+        "schema.json",
+        "workflow.yaml",
+        "trigger_rules.json",
+        "model_cards.json",
+        "examples.json",
+        "eval_cases.json",
+        "failure_cases.json",
+        "version.json"
+      ],
+      "load_policy": "Load only when the core operating skill identifies a need for deeper model-based reasoning."
+    },
+    {
+      "name": "cognitive-scenario-tools",
+      "layer": 3,
+      "role": "scenario_specific_toolbox",
+      "path": "skills/cognitive-scenario-tools",
+      "entrypoint": "SKILL.md",
+      "resources": [
+        "description.md",
+        "schema.json",
+        "workflow.yaml",
+        "trigger_rules.json",
+        "model_cards.json",
+        "examples.json",
+        "eval_cases.json",
+        "failure_cases.json",
+        "version.json"
+      ],
+      "load_policy": "Load only when a concrete human, social, communication, collaboration, or growth scenario needs specialized lenses."
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.0",
+  "activate_when": [
+    "The task is complex, vague, high-impact, emotionally loaded, or reasoning-heavy.",
+    "The user asks for planning, judgment, execution, verification, iteration, or critique.",
+    "The request has hidden assumptions, unclear success criteria, or meaningful risk.",
+    "The agent may otherwise execute before understanding the real goal."
+  ],
+  "use_lightweight_mode_when": [
+    "The task is simple, reversible, low-risk, and has obvious success criteria.",
+    "A direct command or short answer fully satisfies the request."
+  ],
+  "ask_one_question_when": [
+    "A single missing answer would materially improve correctness.",
+    "The answer cannot be discovered from context.",
+    "Proceeding by assumption would be risky or expensive."
+  ],
+  "continue_with_assumptions_when": [
+    "The assumption is safe and reversible.",
+    "The task can be verified quickly.",
+    "Stopping would create more cost than moving with an explicit assumption."
+  ],
+  "escalate_to_analysis_tools_when": [
+    "Multiple competing explanations or options matter.",
+    "Risk, uncertainty, bias, bottlenecks, or tradeoffs drive the outcome.",
+    "A review, postmortem, or structured decision is needed."
+  ],
+  "escalate_to_scenario_tools_when": [
+    "The task is about relationship, negotiation, collaboration, personal growth, communication, or public expression.",
+    "Scenario-specific incentives, signals, or constraints determine the next action."
+  ],
+  "over_inference_levels": {
+    "light": "Mark the speculation gently and continue.",
+    "medium": "Separate facts, interpretations, and unknowns before acting.",
+    "heavy": "Stop, name the over-inference, and return to verifiable facts and actions."
+  },
+  "red_flags": [
+    "Execution starts before the problem is defined.",
+    "The user's proposed solution is treated as the real target without examination.",
+    "All factors are weighted equally.",
+    "The answer claims certainty without enough evidence.",
+    "The plan cannot be verified after execution."
+  ]
+}

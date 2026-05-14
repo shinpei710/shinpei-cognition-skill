@@ -1,0 +1,285 @@
+{
+  "schema_version": "1.0",
+  "models": [
+    {
+      "id": 1,
+      "name": "Ability Circle",
+      "category": "cognitive_calibration",
+      "use_when": "Deciding where to act under different levels of competence.",
+      "action_rule": "Stay inside known competence for high-stakes decisions; expand through low-risk experiments."
+    },
+    {
+      "id": 2,
+      "name": "Occam's Razor",
+      "category": "cognitive_calibration",
+      "use_when": "Multiple explanations fit the facts.",
+      "action_rule": "Prefer the explanation with fewer extra assumptions until evidence requires complexity."
+    },
+    {
+      "id": 3,
+      "name": "First Principles",
+      "category": "decision_optimization",
+      "use_when": "Inherited assumptions block progress.",
+      "action_rule": "Break the problem into non-negotiable facts and rebuild options from there."
+    },
+    {
+      "id": 4,
+      "name": "Dunning-Kruger Effect",
+      "category": "cognitive_calibration",
+      "use_when": "Confidence is high but evidence or skill is thin.",
+      "action_rule": "Treat early certainty as a risk signal and seek calibration."
+    },
+    {
+      "id": 5,
+      "name": "Hanlon's Razor",
+      "category": "cognitive_calibration",
+      "use_when": "There is temptation to attribute harm to malice.",
+      "action_rule": "Check incompetence, confusion, incentives, or context before assuming intent."
+    },
+    {
+      "id": 6,
+      "name": "Confirmation Bias",
+      "category": "cognitive_calibration",
+      "use_when": "Evidence is being selected to support a preferred conclusion.",
+      "action_rule": "Search for disconfirming facts before committing."
+    },
+    {
+      "id": 7,
+      "name": "Falsifiability",
+      "category": "cognitive_calibration",
+      "use_when": "A claim cannot be tested.",
+      "action_rule": "Convert the claim into observable predictions or mark it as speculation."
+    },
+    {
+      "id": 8,
+      "name": "Straw Man Fallacy",
+      "category": "cognitive_calibration",
+      "use_when": "A position is being attacked in a weakened form.",
+      "action_rule": "Reconstruct the strongest version before critique."
+    },
+    {
+      "id": 9,
+      "name": "Slippery Slope Fallacy",
+      "category": "uncertainty_handling",
+      "use_when": "A small event is expanded into catastrophic inevitability.",
+      "action_rule": "Identify required intermediate steps and estimate their probabilities."
+    },
+    {
+      "id": 10,
+      "name": "Appeal to Authority",
+      "category": "cognitive_calibration",
+      "use_when": "Authority is replacing evidence.",
+      "action_rule": "Treat authority as a clue, not proof."
+    },
+    {
+      "id": 11,
+      "name": "Inversion",
+      "category": "decision_optimization",
+      "use_when": "Success criteria are vague or failure paths are clearer.",
+      "action_rule": "Ask what would guarantee failure, then prevent those paths."
+    },
+    {
+      "id": 12,
+      "name": "Second-Order Thinking",
+      "category": "decision_optimization",
+      "use_when": "The first consequence is obvious but later effects matter.",
+      "action_rule": "Analyze what happens after the immediate result."
+    },
+    {
+      "id": 13,
+      "name": "Pareto Principle",
+      "category": "decision_optimization",
+      "use_when": "Effort is scattered across too many actions.",
+      "action_rule": "Find the small set of causes or actions likely to drive most impact."
+    },
+    {
+      "id": 14,
+      "name": "Opportunity Cost",
+      "category": "decision_optimization",
+      "use_when": "Choosing one path hides what is being sacrificed.",
+      "action_rule": "Compare against the best alternative use of time, money, attention, or trust."
+    },
+    {
+      "id": 15,
+      "name": "Decision Matrix",
+      "category": "decision_optimization",
+      "use_when": "Options involve multiple criteria.",
+      "action_rule": "Score options by weighted criteria, then inspect whether the result matches reality."
+    },
+    {
+      "id": 16,
+      "name": "Sunk Cost Fallacy",
+      "category": "decision_optimization",
+      "use_when": "Past investment pressures continued action.",
+      "action_rule": "Decide based on future value, not unrecoverable cost."
+    },
+    {
+      "id": 17,
+      "name": "Comfort Zone",
+      "category": "growth",
+      "use_when": "Growth requires discomfort.",
+      "action_rule": "Separate productive stretch from destructive overload."
+    },
+    {
+      "id": 18,
+      "name": "Safety Margin",
+      "category": "decision_optimization",
+      "use_when": "Failure cost is high.",
+      "action_rule": "Add buffers for time, money, capacity, quality, and reversibility."
+    },
+    {
+      "id": 19,
+      "name": "Hyperbolic Discounting",
+      "category": "growth",
+      "use_when": "Short-term rewards override long-term interests.",
+      "action_rule": "Add friction to impulsive choices and rewards to delayed benefits."
+    },
+    {
+      "id": 20,
+      "name": "Framing Effect",
+      "category": "cognitive_calibration",
+      "use_when": "Wording changes judgment.",
+      "action_rule": "Reframe the same facts in gain, loss, cost, risk, and opportunity language."
+    },
+    {
+      "id": 21,
+      "name": "Systems Thinking",
+      "category": "system_diagnosis",
+      "use_when": "Outcomes arise from interactions rather than one cause.",
+      "action_rule": "Map elements, relationships, flows, incentives, and feedback."
+    },
+    {
+      "id": 22,
+      "name": "Feedback Loop",
+      "category": "system_diagnosis",
+      "use_when": "Behavior reinforces or corrects itself.",
+      "action_rule": "Identify reinforcing loops and balancing loops."
+    },
+    {
+      "id": 23,
+      "name": "Critical Mass",
+      "category": "system_diagnosis",
+      "use_when": "Progress is slow until a threshold is reached.",
+      "action_rule": "Ask what accumulation or condition triggers phase change."
+    },
+    {
+      "id": 24,
+      "name": "Bottleneck Theory",
+      "category": "system_diagnosis",
+      "use_when": "The whole system is constrained by one weak link.",
+      "action_rule": "Improve the bottleneck before optimizing elsewhere."
+    },
+    {
+      "id": 26,
+      "name": "Emergence",
+      "category": "system_diagnosis",
+      "use_when": "The whole behaves differently from the parts.",
+      "action_rule": "Look for new properties created by interaction."
+    },
+    {
+      "id": 27,
+      "name": "Path Dependence",
+      "category": "system_diagnosis",
+      "use_when": "Early choices constrain later options.",
+      "action_rule": "Identify lock-in, switching costs, and path-reset opportunities."
+    },
+    {
+      "id": 29,
+      "name": "Entropy",
+      "category": "system_diagnosis",
+      "use_when": "Systems decay without maintenance.",
+      "action_rule": "Add routines, constraints, and energy input to preserve order."
+    },
+    {
+      "id": 30,
+      "name": "Reductionism and Holism",
+      "category": "system_diagnosis",
+      "use_when": "Analysis is either too fragmented or too vague.",
+      "action_rule": "Zoom between parts and whole until both explain the result."
+    },
+    {
+      "id": 31,
+      "name": "Probability Thinking",
+      "category": "uncertainty_handling",
+      "use_when": "A question is being treated as yes or no.",
+      "action_rule": "Estimate likelihood, confidence, and evidence that would change the estimate."
+    },
+    {
+      "id": 32,
+      "name": "Bayesian Updating",
+      "category": "uncertainty_handling",
+      "use_when": "New information arrives.",
+      "action_rule": "Update belief strength instead of flipping between certainties."
+    },
+    {
+      "id": 33,
+      "name": "Survivorship Bias",
+      "category": "uncertainty_handling",
+      "use_when": "Learning only from visible winners.",
+      "action_rule": "Ask what failed cases are missing from the sample."
+    },
+    {
+      "id": 38,
+      "name": "Black Swan",
+      "category": "uncertainty_handling",
+      "use_when": "Rare, high-impact events matter.",
+      "action_rule": "Reduce fragility instead of pretending to predict everything."
+    },
+    {
+      "id": 39,
+      "name": "Antifragility",
+      "category": "uncertainty_handling",
+      "use_when": "Volatility can be used for growth.",
+      "action_rule": "Design small losses, optionality, and learning loops."
+    },
+    {
+      "id": 40,
+      "name": "Ergodicity",
+      "category": "uncertainty_handling",
+      "use_when": "Average outcomes hide individual ruin.",
+      "action_rule": "Avoid strategies that look good in aggregate but can wipe out the actor."
+    },
+    {
+      "id": 41,
+      "name": "Map Is Not Territory",
+      "category": "cognitive_calibration",
+      "use_when": "A model feels too elegant.",
+      "action_rule": "Remember the model is a simplification; reality can violate it."
+    },
+    {
+      "id": 42,
+      "name": "Regression to Mean",
+      "category": "feedback_and_iteration",
+      "use_when": "Extreme performance is over-interpreted.",
+      "action_rule": "Expect some natural return toward baseline."
+    },
+    {
+      "id": 43,
+      "name": "Asimov's Technology Law",
+      "category": "uncertainty_handling",
+      "use_when": "Evaluating technology trends.",
+      "action_rule": "Avoid overestimating short-term change and underestimating long-term change."
+    },
+    {
+      "id": 44,
+      "name": "Redundancy Backup",
+      "category": "feedback_and_iteration",
+      "use_when": "Failure is costly.",
+      "action_rule": "Build backup paths, reserves, and fallback plans."
+    },
+    {
+      "id": 46,
+      "name": "Capability Emergence",
+      "category": "growth",
+      "use_when": "Combined skills may create a new ability.",
+      "action_rule": "Look for non-linear effects from skill stacking."
+    },
+    {
+      "id": 47,
+      "name": "Compound Effect",
+      "category": "feedback_and_iteration",
+      "use_when": "Small repeated actions matter.",
+      "action_rule": "Favor routines with accumulation and compounding payoff."
+    }
+  ]
+}

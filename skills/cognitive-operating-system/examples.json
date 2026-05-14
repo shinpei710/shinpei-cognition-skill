@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.0",
+  "examples": [
+    {
+      "id": "repo-refactor-request",
+      "input": "Refactor this repo and push the changes.",
+      "expected_behavior": [
+        "Define the requested outcome and success criteria.",
+        "Inspect repository state before editing.",
+        "Identify whether direct push is risky.",
+        "Choose a bounded branch or PR workflow when appropriate.",
+        "Verify tests or structural checks before publishing."
+      ],
+      "response_shape": [
+        "problem definition",
+        "known facts and unknowns",
+        "chosen path",
+        "actions taken",
+        "verification result"
+      ]
+    },
+    {
+      "id": "ambiguous-life-decision",
+      "input": "Should I quit my job immediately?",
+      "expected_behavior": [
+        "Do not answer with a simplistic yes or no.",
+        "Separate facts, assumptions, emotions, and constraints.",
+        "Identify downside risk and reversibility.",
+        "Ask one focused question if the missing information changes the safe path.",
+        "Prefer a small verifiable next step over irreversible action."
+      ],
+      "response_shape": [
+        "facts",
+        "assumptions",
+        "key risk",
+        "minimal next action"
+      ]
+    }
+  ]
+}

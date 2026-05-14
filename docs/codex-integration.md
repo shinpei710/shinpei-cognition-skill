@@ -4,6 +4,16 @@
 
 This guide teaches Codex to use the cognitive skill stack as a work constraint.
 
+The repository is structured as a skill module library. Use `SKILL.md` as the
+entrypoint, then load adjacent structured resources only when they improve the
+task:
+
+- `schema.json` for input and output contracts
+- `trigger_rules.json` for activation and caution logic
+- `workflow.yaml` for ordered execution
+- `examples.json` and `eval_cases.json` for behavior checks
+- `failure_cases.json` for known traps and recovery behavior
+
 ## Minimal AGENTS.md snippet
 
 ```md
@@ -22,6 +32,7 @@ Default loop:
 Use `cognitive-analysis-tools` only when deeper model-based reasoning is needed.
 Use `cognitive-scenario-tools` only after general analysis identifies a concrete domain such as relationship, negotiation, communication, organization, personal growth, or strategy.
 Do not load all models by default. Keep the core light and call tools on demand.
+When modifying skills, update the structured resources beside `SKILL.md`: schema, workflow, trigger rules, examples, eval cases, failure cases, and version record.
 ```
 
 ## Expected Behavior
@@ -49,3 +60,14 @@ Steps: ...
 Verification: ...
 Reusable lesson: ...
 ```
+
+## Skill Maintenance Checklist
+
+When changing a skill:
+
+1. Keep `SKILL.md` concise and focused on when to use the skill.
+2. Update the machine-readable files beside it.
+3. Add at least one eval case for new behavior.
+4. Add a failure case when a new risk is discovered.
+5. Update `version.json` and `skills/catalog.json`.
+6. Run `python3 scripts/validate_modules.py` before publishing.
