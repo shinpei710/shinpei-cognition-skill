@@ -70,4 +70,5 @@ When changing a skill:
 3. Add at least one eval case for new behavior.
 4. Add a failure case when a new risk is discovered.
 5. Update `version.json` and `skills/catalog.json`.
-6. Run `python3 scripts/validate_modules.py` before publishing.
+6. Install validation dependencies with `python3 -m pip install -r requirements.txt`.
+7. Run `python3 scripts/validate_modules.py` before publishing.

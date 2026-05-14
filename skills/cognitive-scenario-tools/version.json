@@ -1,10 +1,15 @@
 {
   "schema_version": "1.0",
   "module": "cognitive-scenario-tools",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "status": "draft",
   "updated_at": "2026-05-14",
   "changes": [
+    {
+      "version": "0.2.1",
+      "date": "2026-05-14",
+      "summary": "Completed model_cards.json coverage for every model referenced by scenario routing rules."
+    },
     {
       "version": "0.2.0",
       "date": "2026-05-14",

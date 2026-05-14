@@ -70,6 +70,118 @@
       "scenario": "personal_growth",
       "use_when": "Attention is wasted on issues outside practical influence.",
       "action_rule": "Move energy from concern to influence to direct control."
+    },
+    {
+      "id": 1,
+      "name": "Ability Circle",
+      "scenario": "competition_and_strategy",
+      "use_when": "A scenario requires choosing actions that fit current competence and leverage.",
+      "action_rule": "Stay inside known competence for high-stakes moves; expand through low-risk experiments."
+    },
+    {
+      "id": 6,
+      "name": "Confirmation Bias",
+      "scenario": "public_expression_and_persuasion",
+      "use_when": "A communicator or audience may be selecting evidence that supports a preferred belief.",
+      "action_rule": "Actively look for disconfirming facts and address the strongest counterpoint."
+    },
+    {
+      "id": 10,
+      "name": "Appeal to Authority",
+      "scenario": "public_expression_and_persuasion",
+      "use_when": "Authority is being used as a substitute for evidence.",
+      "action_rule": "Treat authority as a signal to investigate, not as proof."
+    },
+    {
+      "id": 14,
+      "name": "Opportunity Cost",
+      "scenario": "negotiation_and_cooperation",
+      "use_when": "A negotiation or cooperation choice hides what each side gives up.",
+      "action_rule": "Compare the proposed action with the best alternative use of time, money, attention, or trust."
+    },
+    {
+      "id": 17,
+      "name": "Comfort Zone",
+      "scenario": "personal_growth",
+      "use_when": "Growth requires discomfort but overload is possible.",
+      "action_rule": "Separate productive stretch from destructive overload."
+    },
+    {
+      "id": 18,
+      "name": "Safety Margin",
+      "scenario": "cross_scenario",
+      "use_when": "A social or strategic action has meaningful downside risk.",
+      "action_rule": "Add buffers for time, trust, reversibility, reputation, and fallback options."
+    },
+    {
+      "id": 19,
+      "name": "Hyperbolic Discounting",
+      "scenario": "personal_growth",
+      "use_when": "Short-term comfort or reward is overriding long-term interests.",
+      "action_rule": "Add friction to impulsive choices and make delayed rewards easier to notice."
+    },
+    {
+      "id": 20,
+      "name": "Framing Effect",
+      "scenario": "cross_scenario",
+      "use_when": "Different wording may change how a relationship, negotiation, or public message is received.",
+      "action_rule": "Reframe the same facts in gain, loss, cost, risk, and opportunity language before choosing the message."
+    },
+    {
+      "id": 22,
+      "name": "Feedback Loop",
+      "scenario": "shared_resources_and_organizations",
+      "use_when": "Behavior in a group reinforces itself or corrects itself over time.",
+      "action_rule": "Identify reinforcing and balancing loops, then adjust the feedback signal or cadence."
+    },
+    {
+      "id": 24,
+      "name": "Bottleneck Theory",
+      "scenario": "shared_resources_and_organizations",
+      "use_when": "A group or resource system is constrained by one weak link.",
+      "action_rule": "Improve the bottleneck before optimizing surrounding activities."
+    },
+    {
+      "id": 27,
+      "name": "Path Dependence",
+      "scenario": "shared_resources_and_organizations",
+      "use_when": "Earlier coordination choices constrain current options.",
+      "action_rule": "Identify lock-in, switching costs, and opportunities to reset the path."
+    },
+    {
+      "id": 38,
+      "name": "Black Swan",
+      "scenario": "competition_and_strategy",
+      "use_when": "Rare, high-impact events could dominate a strategy.",
+      "action_rule": "Reduce fragility and preserve optionality instead of pretending to predict the event."
+    },
+    {
+      "id": 39,
+      "name": "Antifragility",
+      "scenario": "competition_and_strategy",
+      "use_when": "Volatility can be turned into learning or advantage.",
+      "action_rule": "Design small losses, optionality, and feedback loops so stress improves the system."
+    },
+    {
+      "id": 41,
+      "name": "Map Is Not Territory",
+      "scenario": "public_expression_and_persuasion",
+      "use_when": "A story, model, or message may be more elegant than the reality it describes.",
+      "action_rule": "Treat the model as a simplification and check it against audience evidence or real behavior."
+    },
+    {
+      "id": 46,
+      "name": "Capability Emergence",
+      "scenario": "personal_growth",
+      "use_when": "Combined habits or skills may create a new ability.",
+      "action_rule": "Look for non-linear gains from stacking compatible skills."
+    },
+    {
+      "id": 47,
+      "name": "Compound Effect",
+      "scenario": "personal_growth",
+      "use_when": "Small repeated actions matter more than a one-time push.",
+      "action_rule": "Favor repeatable routines with clear accumulation and review."
     }
   ]
 }

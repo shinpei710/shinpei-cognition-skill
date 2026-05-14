@@ -46,7 +46,11 @@ def validate_yaml_files() -> None:
     try:
         import yaml  # type: ignore
     except Exception as exc:  # pragma: no cover - environment dependent
-        fail(f"PyYAML is required to validate YAML files: {exc}")
+        fail(
+            "PyYAML is required to validate YAML files. "
+            "Install dependencies with `python3 -m pip install -r requirements.txt`. "
+            f"Original error: {exc}"
+        )
 
     for path in sorted(ROOT.rglob("*.yaml")) + sorted(ROOT.rglob("*.yml")):
         try:
@@ -99,7 +103,53 @@ def validate_catalog() -> None:
         if isinstance(version_data, dict) and version_data.get("module") != name:
             fail(f"{name} version.json module mismatch")
 
+        validate_model_routing(name, module_dir)
+
         print(f"module ok: {name}")
+
+
+def validate_model_routing(name: str, module_dir: Path) -> None:
+    trigger_rules_path = module_dir / "trigger_rules.json"
+    model_cards_path = module_dir / "model_cards.json"
+    if not trigger_rules_path.is_file() or not model_cards_path.is_file():
+        return
+
+    trigger_rules = load_json(trigger_rules_path)
+    model_cards = load_json(model_cards_path)
+    if not isinstance(trigger_rules, dict) or not isinstance(model_cards, dict):
+        return
+
+    models = model_cards.get("models")
+    if not isinstance(models, list):
+        fail(f"{name} model_cards.json must contain a models list")
+
+    model_names = {
+        item.get("name")
+        for item in models
+        if isinstance(item, dict) and isinstance(item.get("name"), str)
+    }
+
+    referenced_models: set[str] = set()
+    for route in trigger_rules.get("routing", []):
+        if not isinstance(route, dict):
+            continue
+        for model in route.get("models", []):
+            if isinstance(model, str):
+                referenced_models.add(model)
+
+    for category in trigger_rules.get("category_routing", []):
+        if not isinstance(category, dict):
+            continue
+        for model in category.get("typical_models", []):
+            if isinstance(model, str):
+                referenced_models.add(model)
+
+    missing = sorted(referenced_models - model_names)
+    if missing:
+        fail(
+            f"{name} trigger_rules.json references models missing from "
+            f"model_cards.json: {', '.join(missing)}"
+        )
 
 
 def main() -> int:

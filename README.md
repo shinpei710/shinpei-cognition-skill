@@ -94,6 +94,7 @@ When adding or changing a skill, update the structured resources together:
 4. Validate JSON, YAML, catalog entries, and `SKILL.md` resource references:
 
 ```bash
+python3 -m pip install -r requirements.txt
 python3 scripts/validate_modules.py
 ```
 
