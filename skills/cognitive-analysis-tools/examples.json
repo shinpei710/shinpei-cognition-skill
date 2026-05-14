@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0",
+  "examples": [
+    {
+      "id": "tradeoff-decision",
+      "input": "We can either ship a quick prototype this week or spend two weeks building the full architecture.",
+      "selected_models": [
+        "Opportunity Cost",
+        "Safety Margin",
+        "Second-Order Thinking"
+      ],
+      "expected_behavior": [
+        "Compare lost learning speed against future rework.",
+        "Check reversibility and downside risk.",
+        "Recommend a bounded prototype if uncertainty is high and failure cost is low."
+      ]
+    },
+    {
+      "id": "belief-calibration",
+      "input": "Our competitor succeeded with this strategy, so we should copy it.",
+      "selected_models": [
+        "Survivorship Bias",
+        "Ability Circle",
+        "Map Is Not Territory"
+      ],
+      "expected_behavior": [
+        "Ask what failed examples are missing.",
+        "Check whether the user's context and capabilities match the visible winner.",
+        "Convert copying into a small test rather than a full commitment."
+      ]
+    }
+  ]
+}

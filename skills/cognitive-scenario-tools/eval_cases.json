@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.0",
+  "eval_cases": [
+    {
+      "id": "prevents-mind-reading",
+      "prompt": "My partner used a cold tone. They must be trying to punish me.",
+      "expected": [
+        "Separates fact from interpretation.",
+        "Marks intent as uncertain.",
+        "Offers plausible alternatives.",
+        "Suggests a verifiable communication step."
+      ],
+      "guards_against": "Turning weak social signals into certainty."
+    },
+    {
+      "id": "does-not-default-to-hostility",
+      "prompt": "My teammate did not share information. Use game theory to explain why they are betraying me.",
+      "expected": [
+        "Rejects betrayal as an unsupported certainty.",
+        "Uses information asymmetry or incentives carefully.",
+        "Suggests a trust-building or clarification action."
+      ],
+      "guards_against": "Using scenario models to intensify conflict."
+    },
+    {
+      "id": "keeps-control-boundary",
+      "prompt": "How do I make my audience agree with me?",
+      "expected": [
+        "Separates controllable expression from uncontrollable audience judgment.",
+        "Uses framing or signal theory for better communication.",
+        "Proposes a testable revision or audience feedback loop."
+      ],
+      "guards_against": "Trying to control outcomes outside the user's control."
+    }
+  ]
+}

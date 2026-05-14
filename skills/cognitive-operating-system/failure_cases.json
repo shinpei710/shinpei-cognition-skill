@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.0",
+  "failure_cases": [
+    {
+      "id": "analysis-without-action",
+      "symptom": "The response defines many abstractions but produces no next step.",
+      "risk": "The skill becomes elegant but useless.",
+      "recovery": "Force a minimal verifiable action or state the blocker that prevents action."
+    },
+    {
+      "id": "overweighting-user-premise",
+      "symptom": "The agent treats the user's requested method as the goal.",
+      "risk": "A wrong or expensive path is optimized.",
+      "recovery": "Restate the desired outcome and compare at least one lower-risk alternative."
+    },
+    {
+      "id": "false-certainty",
+      "symptom": "The response presents assumptions as facts.",
+      "risk": "The user acts on unsupported confidence.",
+      "recovery": "Label facts, assumptions, and unknowns explicitly; choose a verification step."
+    },
+    {
+      "id": "framework-overuse",
+      "symptom": "A simple request receives a long meta-process.",
+      "risk": "The skill creates friction instead of clarity.",
+      "recovery": "Use lightweight mode for simple, reversible, low-risk tasks."
+    }
+  ]
+}

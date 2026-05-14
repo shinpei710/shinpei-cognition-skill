@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0",
+  "module": "cognitive-operating-system",
+  "version": "0.2.0",
+  "status": "draft",
+  "updated_at": "2026-05-14",
+  "changes": [
+    {
+      "version": "0.2.0",
+      "date": "2026-05-14",
+      "summary": "Added structured module resources: description, schema, workflow, trigger rules, examples, eval cases, failure cases, and version record."
+    },
+    {
+      "version": "0.1.0",
+      "date": "2026-05-11",
+      "summary": "Initial lightweight cognitive operating skill."
+    }
+  ]
+}

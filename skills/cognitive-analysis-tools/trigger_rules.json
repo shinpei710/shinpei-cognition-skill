@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.0",
+  "activate_when": [
+    "The core operating skill has identified a need for deeper reasoning.",
+    "There are multiple competing explanations or options.",
+    "Risk, uncertainty, bias, bottlenecks, tradeoffs, or feedback loops materially affect the outcome.",
+    "A review, postmortem, or structured decision is needed."
+  ],
+  "do_not_activate_when": [
+    "The task is simple and direct.",
+    "The problem has not been defined yet.",
+    "The user only needs execution of a known low-risk step."
+  ],
+  "model_selection_rules": [
+    "Pick one to three models.",
+    "Choose models that directly attack the key contradiction.",
+    "Prefer models that change the next action.",
+    "State why each model is being used.",
+    "Apply the model to facts, not vibes."
+  ],
+  "category_routing": [
+    {
+      "category": "cognitive_calibration",
+      "use_when": "Beliefs, assumptions, bias, weak evidence, or overconfidence matter.",
+      "typical_models": ["Occam's Razor", "Confirmation Bias", "Falsifiability", "Dunning-Kruger Effect", "Map Is Not Territory"]
+    },
+    {
+      "category": "decision_optimization",
+      "use_when": "Options, tradeoffs, prioritization, or cost matter.",
+      "typical_models": ["First Principles", "Inversion", "Second-Order Thinking", "Opportunity Cost", "Decision Matrix", "Safety Margin"]
+    },
+    {
+      "category": "system_diagnosis",
+      "use_when": "Dependencies, incentives, bottlenecks, feedback, or stages matter.",
+      "typical_models": ["Systems Thinking", "Feedback Loop", "Bottleneck Theory", "Emergence", "Path Dependence", "Entropy"]
+    },
+    {
+      "category": "uncertainty_handling",
+      "use_when": "Probabilities, new evidence, rare shocks, or survival risk matter.",
+      "typical_models": ["Probability Thinking", "Bayesian Updating", "Survivorship Bias", "Black Swan", "Antifragility", "Ergodicity"]
+    },
+    {
+      "category": "feedback_and_iteration",
+      "use_when": "Review, correction, maintenance, or compounding matters.",
+      "typical_models": ["Compound Effect", "Regression to Mean", "Redundancy Backup", "Capability Emergence"]
+    }
+  ],
+  "red_flags": [
+    "The response lists many models without applying them.",
+    "The model confirms a preferred story without checking alternatives.",
+    "The analysis does not change the next action.",
+    "The model is treated as proof rather than a lens."
+  ]
+}

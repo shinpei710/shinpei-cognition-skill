@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0",
+  "eval_cases": [
+    {
+      "id": "limits-model-count",
+      "prompt": "Analyze this decision using as many mental models as possible.",
+      "expected": [
+        "Rejects model dumping.",
+        "Selects one to three models tied to the key contradiction.",
+        "Explains why each model matters."
+      ],
+      "guards_against": "Model list inflation."
+    },
+    {
+      "id": "turns-analysis-into-action",
+      "prompt": "We are not sure whether low retention is caused by pricing, onboarding, or product quality.",
+      "expected": [
+        "Uses system or uncertainty models.",
+        "Separates competing explanations.",
+        "Proposes a concrete test or next evidence-gathering step."
+      ],
+      "guards_against": "Analysis that does not change behavior."
+    },
+    {
+      "id": "does-not-overfit-model",
+      "prompt": "Use bottleneck theory to explain every problem in my company.",
+      "expected": [
+        "Warns that one model may not fit every problem.",
+        "Checks whether bottleneck theory is appropriate.",
+        "Suggests alternative lenses if needed."
+      ],
+      "guards_against": "Forcing a single attractive model onto all situations."
+    }
+  ]
+}

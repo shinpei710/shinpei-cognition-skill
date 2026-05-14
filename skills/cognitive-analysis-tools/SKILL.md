@@ -11,6 +11,20 @@ This is the general-purpose model toolbox. Use it only after `cognitive-operatin
 
 Do not use every model. Select the smallest set that clarifies the task.
 
+## Structured Resources
+
+Load only what the task needs:
+
+- `description.md`: human-readable intent, scope, non-goals, and usage notes.
+- `schema.json`: input and output contract for model-based analysis.
+- `workflow.yaml`: model selection and application workflow.
+- `trigger_rules.json`: activation, model-selection, and caution rules.
+- `model_cards.json`: machine-readable model catalog.
+- `examples.json`: example invocations and expected output behavior.
+- `eval_cases.json`: regression cases for model selection and analysis quality.
+- `failure_cases.json`: known failure modes and recovery behavior.
+- `version.json`: behavior version and change history.
+
 ## Selection Protocol
 
 1. Identify the task type: cognition, decision, system, uncertainty, feedback, growth.
