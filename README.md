@@ -45,6 +45,10 @@ as long as `SKILL.md` points to when they should be read.
 See `docs/module-spec.md` for the repository standard and
 `skills/catalog.json` for the current module index.
 
+## Blog
+
+- [从 Skill 到元认知：OpenClaw、Hermes 与 OpenSquilla 的演化综述](docs/blog/2026-06-05-agent-metacognition-review.md)
+
 ## Layer 1: Core Operating Skill
 
 - `cognitive-operating-system`
