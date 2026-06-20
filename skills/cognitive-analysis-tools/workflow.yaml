@@ -6,7 +6,7 @@ preconditions:
   - "There is a specific need for deeper reasoning."
 steps:
   - id: classify
-    purpose: "Identify task type: cognition, decision, system, uncertainty, feedback, growth, or mixed."
+    purpose: "Identify task type: cognition, decision, system, uncertainty, feedback, growth, product readiness, system readiness, or mixed."
     checkpoint: "The analysis need is explicit."
     artifact: "task_type"
   - id: select_models
@@ -29,3 +29,8 @@ guardrails:
   - "Use models as tools, not as labels."
   - "Do not exceed three models unless explicitly justified."
   - "Return to the core operating loop after analysis."
+  - "Do not confuse feature count with system completeness."
+conditional_resources:
+  - resource: "system_completeness.json"
+    load_when: "The task is about MVP scope, product stage gates, launch readiness, workflow completeness, or whether a system is complete enough for the next stage."
+    artifact: "system_completeness_assessment"

@@ -1,10 +1,15 @@
 {
   "schema_version": "1.0",
   "module": "cognitive-operating-system",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "status": "draft",
-  "updated_at": "2026-05-14",
+  "updated_at": "2026-06-20",
   "changes": [
+    {
+      "version": "0.2.1",
+      "date": "2026-06-20",
+      "summary": "Tightened activation boundaries and added an explicit lightweight mode rule for simple tasks."
+    },
     {
       "version": "0.2.0",
       "date": "2026-05-14",

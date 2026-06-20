@@ -13,6 +13,7 @@ task:
 - `workflow.yaml` for ordered execution
 - `examples.json` and `eval_cases.json` for behavior checks
 - `failure_cases.json` for known traps and recovery behavior
+- `system_completeness.json` when product or workflow readiness, MVP scope, self-use, friend alpha, initial release, or rollout gates matter
 
 ## Minimal AGENTS.md snippet
 
@@ -29,7 +30,7 @@ Default loop:
 7. Verify against the success criteria.
 8. Convert feedback into reusable rules, templates, or improvements.
 
-Use `cognitive-analysis-tools` only when deeper model-based reasoning is needed.
+Use `cognitive-analysis-tools` only when deeper model-based reasoning is needed. Load `system_completeness.json` for product stage gates or system completeness checks.
 Use `cognitive-scenario-tools` only after general analysis identifies a concrete domain such as relationship, negotiation, communication, organization, personal growth, or strategy.
 Do not load all models by default. Keep the core light and call tools on demand.
 When modifying skills, update the structured resources beside `SKILL.md`: schema, workflow, trigger rules, examples, eval cases, failure cases, and version record.

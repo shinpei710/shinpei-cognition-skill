@@ -28,6 +28,25 @@
         "Check whether the user's context and capabilities match the visible winner.",
         "Convert copying into a small test rather than a full commitment."
       ]
+    },
+    {
+      "id": "product-stage-gate",
+      "input": "I am building a small product. What counts as MVP, self-use ready, friend alpha, and initial release?",
+      "selected_models": [
+        "Systems Thinking",
+        "Bottleneck Theory",
+        "Safety Margin"
+      ],
+      "resources": [
+        "system_completeness.json"
+      ],
+      "expected_behavior": [
+        "Evaluate the product as a value loop instead of a feature list.",
+        "Define the current stage and the next stage gate.",
+        "Score system completeness dimensions using evidence.",
+        "Identify blockers and the smallest next increment.",
+        "Defer later-stage polish into a backlog."
+      ]
     }
   ]
 }

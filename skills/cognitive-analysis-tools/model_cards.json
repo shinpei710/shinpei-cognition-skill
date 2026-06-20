@@ -255,10 +255,14 @@
     },
     {
       "id": 43,
-      "name": "Asimov's Technology Law",
+      "name": "Amara's Law",
       "category": "uncertainty_handling",
-      "use_when": "Evaluating technology trends.",
-      "action_rule": "Avoid overestimating short-term change and underestimating long-term change."
+      "use_when": "Evaluating technology trends or product timing expectations.",
+      "action_rule": "Avoid overestimating short-term change and underestimating long-term change.",
+      "aliases": [
+        "Asimov's Technology Law",
+        "Amara technology law"
+      ]
     },
     {
       "id": 44,

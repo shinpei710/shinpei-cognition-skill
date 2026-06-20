@@ -1,6 +1,6 @@
 ---
 name: cognitive-operating-system
-description: Use when a task is complex, vague, high-impact, emotionally loaded, easy to over-assume, or requires planning, judgment, execution, validation, or iterative improvement
+description: Use when a task is complex, vague, high-impact, emotionally loaded, easy to over-assume, or requires planning plus validation beyond simple execution. Avoid for simple, low-risk, directly answerable tasks.
 ---
 
 # Cognitive Operating System
@@ -45,6 +45,12 @@ Load only what the task needs:
 6. **Verify**: test against the success standard and look for side effects.
 7. **Reflect**: identify errors, invalid assumptions, and useful patterns.
 8. **Preserve**: update templates, rules, model cards, or checklists.
+
+## Lightweight Mode Rule
+
+Use the shortest useful answer when the task is simple, reversible, low-risk, and has obvious success criteria.
+
+Do not expose the full operating loop unless it improves the result. For simple work, apply the loop silently and answer directly.
 
 ## Brainstorming and Clarification Rule
 

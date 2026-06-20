@@ -18,6 +18,7 @@ machine-readable structure:
 - failure cases
 - evaluation cases
 - version records
+- product and workflow stage gates where relevant
 
 `SKILL.md` remains the lightweight Codex entrypoint. The deeper module
 assets live beside it and should be loaded only when the task needs them.
@@ -40,7 +41,7 @@ skills/<skill-name>/
 ```
 
 Specialized skills may add focused resources, such as `model_cards.json`,
-as long as `SKILL.md` points to when they should be read.
+as long as `SKILL.md` points to when they should be read. Product readiness work can use `system_completeness.json` for MVP, self-use, friend alpha, initial release, and broader rollout gates.
 
 See `docs/module-spec.md` for the repository standard and
 `skills/catalog.json` for the current module index.
@@ -61,6 +62,7 @@ See `docs/module-spec.md` for the repository standard and
     uncertainty, risk, and feedback.
   - Load it only when the core operating skill identifies a need for deeper
     model-based reasoning.
+  - Includes `system_completeness.json` for product and workflow readiness: MVP, self-use, friend alpha, initial release, and broader rollout.
 
 ## Layer 3: Scenario Tools
 
@@ -100,6 +102,6 @@ python3 scripts/validate_modules.py
 
 ## Source note
 
-The 50 mental model names are organized from a public directory page of 《格物之道》 by 诺亚书房. This repository does not reproduce the original book text; it only uses the model names as an index and provides original, agent-oriented summaries and invocation rules.
+The 50 mental model names are organized from a public directory page of 《格物之道》 by 诺亚书房. This repository does not reproduce the original book text; it only uses the model names as an index and provides original, agent-oriented summaries and invocation rules. Some English model names are normalized with aliases when the public directory label differs from common English usage.
 
 Source page: https://www.nuoyashufang.com/4071.html

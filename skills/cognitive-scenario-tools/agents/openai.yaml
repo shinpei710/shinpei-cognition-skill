@@ -1,0 +1,4 @@
+interface:
+  display_name: "Cognitive Scenario Tools"
+  short_description: "Human scenario lenses and action checks"
+  default_prompt: "Use $cognitive-scenario-tools to analyze this human scenario, separate facts from interpretations, and choose a verifiable next action."

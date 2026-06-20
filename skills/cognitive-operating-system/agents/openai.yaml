@@ -1,0 +1,4 @@
+interface:
+  display_name: "Cognitive Operating System"
+  short_description: "Calibrated action loop for serious tasks"
+  default_prompt: "Use $cognitive-operating-system to define the real problem, calibrate assumptions, choose a small verifiable action, and verify the result."

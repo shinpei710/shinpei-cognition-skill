@@ -24,6 +24,24 @@
       "symptom": "The answer never returns to execution or verification.",
       "risk": "Reasoning does not produce progress.",
       "recovery": "End with a decision, test, or next action and hand back to the core loop."
+    },
+    {
+      "id": "feature-count-readiness",
+      "symptom": "The response treats more features as proof that the system is ready.",
+      "risk": "The builder adds scope while the core value loop remains unverified.",
+      "recovery": "Score the system completeness dimensions and prioritize the blocker that prevents the next stage."
+    },
+    {
+      "id": "premature-rollout",
+      "symptom": "The response recommends public promotion before safety, feedback, or recovery paths exist.",
+      "risk": "The product creates avoidable user harm, support overload, or reputational damage.",
+      "recovery": "Return to the current stage gate and require bounded safety, feedback, and maintenance capacity before rollout."
+    },
+    {
+      "id": "perfectionism-stall",
+      "symptom": "The response requires later-stage polish before the current stage can gather evidence.",
+      "risk": "The builder loses momentum and abandons the project.",
+      "recovery": "Define the smallest next increment, exit evidence, and deferred backlog for non-stage requirements."
     }
   ]
 }
