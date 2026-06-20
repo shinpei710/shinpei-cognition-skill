@@ -15,6 +15,8 @@ evaluation, bias checking, system diagnosis, and structured retrospective.
 - uncertainty or downside risk matters
 - a belief needs bias checking or falsification
 - a project or decision needs a postmortem
+- a product, workflow, or agentic system needs a stage-gate readiness check
+- MVP, self-use, friend alpha, initial release, or rollout standards are unclear
 
 ## Non-Goals
 
@@ -28,3 +30,7 @@ evaluation, bias checking, system diagnosis, and structured retrospective.
 Pick one to three models that directly attack the key contradiction. State why
 each model is being used, apply it to known facts, and convert the result into a
 decision, test, or next action.
+
+## System Completeness Note
+
+For product or workflow work, load `system_completeness.json` when the question is about MVP scope, self-use readiness, friend alpha, initial release, broader rollout, or whether the system is complete enough for the next stage.

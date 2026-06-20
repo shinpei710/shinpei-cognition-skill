@@ -104,6 +104,8 @@ def validate_catalog() -> None:
             fail(f"{name} version.json module mismatch")
 
         validate_model_routing(name, module_dir)
+        validate_eval_cases(name, module_dir)
+        validate_agent_metadata(name, module_dir)
 
         print(f"module ok: {name}")
 
@@ -150,6 +152,58 @@ def validate_model_routing(name: str, module_dir: Path) -> None:
             f"{name} trigger_rules.json references models missing from "
             f"model_cards.json: {', '.join(missing)}"
         )
+
+
+def validate_eval_cases(name: str, module_dir: Path) -> None:
+    eval_path = module_dir / "eval_cases.json"
+    failure_path = module_dir / "failure_cases.json"
+
+    eval_data = load_json(eval_path)
+    if not isinstance(eval_data, dict) or not isinstance(eval_data.get("eval_cases"), list):
+        fail(f"{name} eval_cases.json must contain an eval_cases list")
+    if len(eval_data["eval_cases"]) < 2:
+        fail(f"{name} must contain at least two eval cases")
+    for case in eval_data["eval_cases"]:
+        if not isinstance(case, dict):
+            fail(f"{name} eval case must be an object")
+        for field in ("id", "prompt", "expected", "guards_against"):
+            if field not in case:
+                fail(f"{name} eval case missing {field}")
+        if not isinstance(case.get("expected"), list) or not case["expected"]:
+            fail(f"{name} eval case {case.get('id')} must include expected behaviors")
+
+    failure_data = load_json(failure_path)
+    if not isinstance(failure_data, dict) or not isinstance(failure_data.get("failure_cases"), list):
+        fail(f"{name} failure_cases.json must contain a failure_cases list")
+    for case in failure_data["failure_cases"]:
+        if not isinstance(case, dict):
+            fail(f"{name} failure case must be an object")
+        for field in ("id", "symptom", "risk", "recovery"):
+            if field not in case:
+                fail(f"{name} failure case missing {field}")
+
+
+def validate_agent_metadata(name: str, module_dir: Path) -> None:
+    path = module_dir / "agents" / "openai.yaml"
+    if not path.exists():
+        return
+    try:
+        import yaml  # type: ignore
+    except Exception as exc:  # pragma: no cover - environment dependent
+        fail(f"PyYAML is required to validate {path.relative_to(ROOT)}: {exc}")
+    with path.open(encoding="utf-8") as handle:
+        data = yaml.safe_load(handle)
+    if not isinstance(data, dict) or not isinstance(data.get("interface"), dict):
+        fail(f"{name} agents/openai.yaml must contain interface")
+    interface = data["interface"]
+    for field in ("display_name", "short_description", "default_prompt"):
+        if not isinstance(interface.get(field), str) or not interface[field].strip():
+            fail(f"{name} agents/openai.yaml missing interface.{field}")
+    short = interface["short_description"]
+    if not (25 <= len(short) <= 64):
+        fail(f"{name} agents/openai.yaml short_description must be 25-64 characters")
+    if f"${name}" not in interface["default_prompt"]:
+        fail(f"{name} agents/openai.yaml default_prompt must mention ${name}")
 
 
 def main() -> int:

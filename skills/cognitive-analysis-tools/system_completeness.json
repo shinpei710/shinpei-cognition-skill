@@ -1,0 +1,248 @@
+{
+  "schema_version": "1.0",
+  "name": "system-completeness",
+  "purpose": "Evaluate whether a product, workflow, or agentic system is complete enough for the next stage without turning quality standards into perfectionism.",
+  "use_when": [
+    "The task is about building, shipping, or improving a product or workflow.",
+    "The user asks what counts as an MVP, self-use version, alpha, initial release, or broader rollout.",
+    "The system has many partial features but the end-to-end value loop is unclear.",
+    "The user is at risk of abandoning the project because the next milestone is vague."
+  ],
+  "core_rule": "A system is complete for a stage when the main value loop works for that stage's target user with acceptable safety, feedback, and maintenance burden.",
+  "score_scale": [
+    {
+      "score": 0,
+      "label": "absent",
+      "meaning": "The dimension does not exist or only exists as an idea."
+    },
+    {
+      "score": 1,
+      "label": "manual_or_brittle",
+      "meaning": "The dimension works only with heavy founder help, manual workarounds, or frequent breakage."
+    },
+    {
+      "score": 2,
+      "label": "usable_for_stage",
+      "meaning": "The dimension is good enough for the current stage's target users and known constraints."
+    },
+    {
+      "score": 3,
+      "label": "robust_and_repeatable",
+      "meaning": "The dimension works repeatedly with clear recovery paths, documentation, and low support burden."
+    }
+  ],
+  "dimensions": [
+    {
+      "id": "core_value_loop",
+      "weight": 3,
+      "question": "Can the target user complete the main job and receive the promised value?",
+      "blocks_release_when": "The main job cannot be completed end to end."
+    },
+    {
+      "id": "scope_focus",
+      "weight": 2,
+      "question": "Is the product focused on one clear user, one clear use case, and one clear success moment?",
+      "blocks_release_when": "The system tries to serve multiple unrelated use cases before one loop works."
+    },
+    {
+      "id": "input_output_contract",
+      "weight": 2,
+      "question": "Are required inputs, produced outputs, and user expectations clear?",
+      "blocks_release_when": "Users cannot tell what to provide or what they will get."
+    },
+    {
+      "id": "feedback_loop",
+      "weight": 2,
+      "question": "Can the builder observe success, failure, user confusion, and repeated blockers?",
+      "blocks_release_when": "Failures disappear without evidence and no learning is captured."
+    },
+    {
+      "id": "reliability_and_recovery",
+      "weight": 2,
+      "question": "Are common failures handled with clear messages, fallback paths, or manual recovery?",
+      "blocks_release_when": "A normal user can lose work, get stuck, or fail silently."
+    },
+    {
+      "id": "safety_privacy_cost",
+      "weight": 3,
+      "question": "Are data, privacy, irreversible actions, and operating costs bounded for the stage?",
+      "blocks_release_when": "The system can expose sensitive data, create unbounded cost, or perform irreversible harm."
+    },
+    {
+      "id": "user_experience",
+      "weight": 1,
+      "question": "Can the target user understand the next action without developer explanation?",
+      "blocks_release_when": "The user needs constant live explanation for the main path."
+    },
+    {
+      "id": "maintenance_capacity",
+      "weight": 2,
+      "question": "Can the builder maintain the system for the number of users in this stage?",
+      "blocks_release_when": "Support, bugs, or manual work exceed the builder's available capacity."
+    },
+    {
+      "id": "distribution_readiness",
+      "weight": 1,
+      "question": "Is there a clear way to invite the next group of users and explain why they should try it?",
+      "blocks_release_when": "The next user group cannot understand the promise or access the product."
+    }
+  ],
+  "stage_gates": [
+    {
+      "stage": "mvp_build",
+      "target_user": "builder or one highly tolerant target user",
+      "goal": "Prove that the core value loop can work once.",
+      "minimum_standard": [
+        "Core value loop score >= 2 for one narrow use case.",
+        "Safety, privacy, and cost score >= 2 for the limited test context.",
+        "At least one feedback capture path exists, even if manual.",
+        "Non-core features are explicitly deferred."
+      ],
+      "exit_evidence": [
+        "One real task completed end to end.",
+        "The success moment is observable.",
+        "The next blocking improvement is known."
+      ],
+      "do_not_block_on": [
+        "Polished onboarding",
+        "Scalable architecture",
+        "Full automation",
+        "Public documentation",
+        "Growth channels"
+      ]
+    },
+    {
+      "stage": "self_use",
+      "target_user": "builder using the product in real personal work",
+      "goal": "Verify that the system survives repeated real use without immediate abandonment.",
+      "minimum_standard": [
+        "Core value loop score >= 2 across several real tasks.",
+        "Feedback loop score >= 2 with a simple issue log or improvement queue.",
+        "Reliability and recovery score >= 1 with known manual workarounds.",
+        "Maintenance burden fits the builder's current energy and schedule."
+      ],
+      "exit_evidence": [
+        "Use it for at least 7 days or 5 real tasks.",
+        "No critical blocker repeats twice without a planned fix.",
+        "The product saves time, reduces friction, or produces value for the builder."
+      ],
+      "do_not_block_on": [
+        "Friend-friendly onboarding",
+        "Edge-case handling",
+        "Visual polish beyond basic clarity",
+        "Automated analytics"
+      ]
+    },
+    {
+      "stage": "friend_alpha",
+      "target_user": "3 to 5 trusted friends or collaborators",
+      "goal": "Check whether users outside the builder can complete the main loop with limited help.",
+      "minimum_standard": [
+        "Core value loop score >= 2 for the invited use case.",
+        "Input/output contract score >= 2.",
+        "User experience score >= 2 for the main path.",
+        "Safety, privacy, and cost score >= 2 for real user data.",
+        "Feedback capture is explicit and easy for testers."
+      ],
+      "exit_evidence": [
+        "At least 3 testers try the product.",
+        "At least 2 testers complete the main task with limited help.",
+        "Top 3 blockers are ranked by frequency and severity.",
+        "A short change list for the next version exists."
+      ],
+      "do_not_block_on": [
+        "Perfect retention",
+        "Full public positioning",
+        "Automated support",
+        "Large feature breadth"
+      ],
+      "aliases": [
+        "friends inner test",
+        "trusted tester alpha",
+        "closed beta with friends"
+      ]
+    },
+    {
+      "stage": "initial_release",
+      "target_user": "small public or semi-public audience beyond close friends",
+      "goal": "Release a stable first version that a motivated target user can understand, use, and give feedback on.",
+      "minimum_standard": [
+        "Core value loop score >= 3 for the primary use case.",
+        "Safety, privacy, and cost score >= 2 with explicit limits.",
+        "Reliability and recovery score >= 2 for common failures.",
+        "User experience score >= 2 without live explanation for the main path.",
+        "Distribution readiness score >= 2 with a clear promise, access path, and feedback channel.",
+        "No known P0 or P1 blocker remains open."
+      ],
+      "exit_evidence": [
+        "10 to 20 non-friend users can access or try it.",
+        "A basic onboarding or landing explanation exists.",
+        "Common failures are visible and recoverable.",
+        "The builder has a maintenance plan for the next two weeks."
+      ],
+      "do_not_block_on": [
+        "Enterprise-grade polish",
+        "Complete analytics stack",
+        "All requested features",
+        "Large-scale growth loops"
+      ],
+      "aliases": [
+        "first public version",
+        "small public launch",
+        "v1 release"
+      ]
+    },
+    {
+      "stage": "broader_rollout",
+      "target_user": "repeatable target segment with observable demand",
+      "goal": "Scale only after the product has evidence of repeatable value and manageable operations.",
+      "minimum_standard": [
+        "Core value loop remains stable under increased usage.",
+        "Support burden per user is decreasing or bounded.",
+        "Feedback loop separates one-off requests from repeated demand.",
+        "Positioning is clear enough to attract the intended segment.",
+        "Cost and maintenance risks are monitored."
+      ],
+      "exit_evidence": [
+        "Users return or recommend it for a real reason.",
+        "Repeated user problems are being converted into product improvements.",
+        "Growth work does not break maintenance capacity."
+      ],
+      "do_not_block_on": [
+        "Serving every audience",
+        "Feature parity with mature competitors",
+        "Perfect automation before learning"
+      ]
+    }
+  ],
+  "evaluation_workflow": [
+    "State the current stage and the next desired stage.",
+    "Score each dimension from 0 to 3 using current evidence.",
+    "Mark any blocker dimension that prevents the next stage regardless of total score.",
+    "Choose the smallest system increment that raises a blocker to the required level.",
+    "Create a version goal with exit evidence and a time-boxed review.",
+    "Defer non-stage requirements into a backlog instead of letting them block action."
+  ],
+  "anti_stall_rules": [
+    "If the next task cannot be finished in one or two focused sessions, split it smaller.",
+    "If the core value loop is not working after three work sessions, cut scope before adding features.",
+    "If polishing delays the next evidence point, ship to the current stage's limited audience first.",
+    "If the builder feels vague resistance, convert the milestone into one observable exit test."
+  ],
+  "output_fields": [
+    "current_stage",
+    "target_stage",
+    "dimension_scores",
+    "blockers",
+    "stage_gate_decision",
+    "smallest_next_increment",
+    "exit_evidence",
+    "deferred_backlog"
+  ],
+  "stage_decision_rules": [
+    "Use the stage minimum standards as gates; do not rely on total score alone.",
+    "A blocker dimension blocks the next stage even when other dimensions score high.",
+    "If the next stage fails, choose one blocker and one smallest increment instead of redesigning the whole product.",
+    "If the current stage passes, advance to the next smallest audience and keep feedback explicit."
+  ]
+}

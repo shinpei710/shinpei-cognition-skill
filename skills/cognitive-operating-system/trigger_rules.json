@@ -2,13 +2,14 @@
   "schema_version": "1.0",
   "activate_when": [
     "The task is complex, vague, high-impact, emotionally loaded, or reasoning-heavy.",
-    "The user asks for planning, judgment, execution, verification, iteration, or critique.",
+    "The user asks for planning, judgment, validation, iteration, critique, or a decision with meaningful tradeoffs.",
     "The request has hidden assumptions, unclear success criteria, or meaningful risk.",
     "The agent may otherwise execute before understanding the real goal."
   ],
   "use_lightweight_mode_when": [
     "The task is simple, reversible, low-risk, and has obvious success criteria.",
-    "A direct command or short answer fully satisfies the request."
+    "A direct command or short answer fully satisfies the request.",
+    "The full reasoning scaffold would slow the user down more than it helps."
   ],
   "ask_one_question_when": [
     "A single missing answer would materially improve correctness.",
@@ -40,5 +41,10 @@
     "All factors are weighted equally.",
     "The answer claims certainty without enough evidence.",
     "The plan cannot be verified after execution."
+  ],
+  "do_not_activate_when": [
+    "The task is simple, low-risk, reversible, and directly answerable.",
+    "The user only needs a factual answer, small formatting change, or obvious mechanical step.",
+    "Using the full loop would add friction without improving correctness."
   ]
 }

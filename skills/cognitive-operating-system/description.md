@@ -25,6 +25,7 @@ prevents blind execution by forcing a small loop:
 ## Non-Goals
 
 - Do not turn every small request into a heavy consulting process.
+- Do not expose the full loop for simple, low-risk, directly answerable tasks.
 - Do not load every deeper model by default.
 - Do not use critique as a reason to avoid useful action.
 - Do not claim certainty when the evidence only supports a hypothesis.

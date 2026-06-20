@@ -3,7 +3,10 @@
   "title": "Cognitive Analysis Tools Contract",
   "input_schema": {
     "type": "object",
-    "required": ["problem_definition", "analysis_need"],
+    "required": [
+      "problem_definition",
+      "analysis_need"
+    ],
     "properties": {
       "problem_definition": {
         "type": "string",
@@ -15,33 +18,90 @@
       },
       "known_facts": {
         "type": "array",
-        "items": { "type": "string" }
+        "items": {
+          "type": "string"
+        }
       },
       "assumptions": {
         "type": "array",
-        "items": { "type": "string" }
+        "items": {
+          "type": "string"
+        }
       },
       "options": {
         "type": "array",
-        "items": { "type": "string" }
+        "items": {
+          "type": "string"
+        }
       },
       "constraints": {
         "type": "array",
-        "items": { "type": "string" }
+        "items": {
+          "type": "string"
+        }
       },
       "risk_level": {
         "type": "string",
-        "enum": ["low", "medium", "high", "unknown"]
+        "enum": [
+          "low",
+          "medium",
+          "high",
+          "unknown"
+        ]
       },
       "task_type": {
         "type": "string",
-        "enum": ["cognition", "decision", "system", "uncertainty", "feedback", "growth", "mixed"]
+        "enum": [
+          "cognition",
+          "decision",
+          "system",
+          "uncertainty",
+          "feedback",
+          "growth",
+          "product_readiness",
+          "system_readiness",
+          "mixed"
+        ]
+      },
+      "target_stage": {
+        "type": "string",
+        "enum": [
+          "mvp_build",
+          "self_use",
+          "friend_alpha",
+          "initial_release",
+          "broader_rollout",
+          "unknown"
+        ],
+        "description": "Optional next product or system maturity stage when system completeness is being evaluated."
+      },
+      "system_context": {
+        "type": "string",
+        "description": "Optional summary of the product, workflow, or agentic system being evaluated."
+      },
+      "current_stage": {
+        "type": "string",
+        "enum": [
+          "idea",
+          "prototype",
+          "mvp_build",
+          "self_use",
+          "friend_alpha",
+          "initial_release",
+          "broader_rollout",
+          "unknown"
+        ],
+        "description": "Optional current product or system maturity stage when system completeness is being evaluated."
       }
     }
   },
   "output_schema": {
     "type": "object",
-    "required": ["selected_models", "analysis", "next_action"],
+    "required": [
+      "selected_models",
+      "analysis",
+      "next_action"
+    ],
     "properties": {
       "selected_models": {
         "type": "array",
@@ -49,10 +109,17 @@
         "maxItems": 3,
         "items": {
           "type": "object",
-          "required": ["name", "reason"],
+          "required": [
+            "name",
+            "reason"
+          ],
           "properties": {
-            "name": { "type": "string" },
-            "reason": { "type": "string" }
+            "name": {
+              "type": "string"
+            },
+            "reason": {
+              "type": "string"
+            }
           }
         }
       },
@@ -60,17 +127,28 @@
         "type": "array",
         "items": {
           "type": "object",
-          "required": ["model", "finding"],
+          "required": [
+            "model",
+            "finding"
+          ],
           "properties": {
-            "model": { "type": "string" },
-            "finding": { "type": "string" },
+            "model": {
+              "type": "string"
+            },
+            "finding": {
+              "type": "string"
+            },
             "evidence": {
               "type": "array",
-              "items": { "type": "string" }
+              "items": {
+                "type": "string"
+              }
             },
             "limits": {
               "type": "array",
-              "items": { "type": "string" }
+              "items": {
+                "type": "string"
+              }
             }
           }
         }
@@ -81,6 +159,68 @@
       },
       "next_action": {
         "type": "string"
+      },
+      "system_completeness_assessment": {
+        "type": "object",
+        "properties": {
+          "current_stage": {
+            "type": "string"
+          },
+          "target_stage": {
+            "type": "string"
+          },
+          "dimension_scores": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "dimension",
+                "score",
+                "evidence"
+              ],
+              "properties": {
+                "dimension": {
+                  "type": "string"
+                },
+                "score": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 3
+                },
+                "evidence": {
+                  "type": "string"
+                },
+                "blocker": {
+                  "type": "boolean"
+                }
+              }
+            }
+          },
+          "stage_gate_decision": {
+            "type": "string"
+          },
+          "smallest_next_increment": {
+            "type": "string"
+          },
+          "exit_evidence": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "deferred_backlog": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "blockers": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
       }
     }
   }

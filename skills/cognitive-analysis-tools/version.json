@@ -1,10 +1,15 @@
 {
   "schema_version": "1.0",
   "module": "cognitive-analysis-tools",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "status": "draft",
-  "updated_at": "2026-05-14",
+  "updated_at": "2026-06-20",
   "changes": [
+    {
+      "version": "0.3.0",
+      "date": "2026-06-20",
+      "summary": "Added system completeness stage gates for MVP, self-use, friend alpha, initial release, and broader rollout; tightened model catalog usage and normalized Amara law naming."
+    },
     {
       "version": "0.2.0",
       "date": "2026-05-14",

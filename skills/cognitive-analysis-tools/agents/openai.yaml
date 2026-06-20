@@ -1,0 +1,4 @@
+interface:
+  display_name: "Cognitive Analysis Tools"
+  short_description: "Mental models and system readiness checks"
+  default_prompt: "Use $cognitive-analysis-tools to select the smallest useful models and assess system completeness for the next action."

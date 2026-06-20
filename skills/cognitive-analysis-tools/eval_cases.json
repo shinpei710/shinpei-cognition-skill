@@ -30,6 +30,17 @@
         "Suggests alternative lenses if needed."
       ],
       "guards_against": "Forcing a single attractive model onto all situations."
+    },
+    {
+      "id": "mvp-stage-gate-keeps-action-moving",
+      "prompt": "I want to build a product, but I keep quitting after the first prototype. Tell me what counts as MVP, self-use ready, friend alpha, and initial release.",
+      "expected": [
+        "Loads or follows the system completeness stage-gate standard.",
+        "Separates MVP, self-use, friend alpha, initial release, and broader rollout.",
+        "Evaluates the core value loop, feedback, reliability, safety, and maintenance burden.",
+        "Ends with a small next increment and exit evidence."
+      ],
+      "guards_against": "Vague product advice that fails to create a usable path for action."
     }
   ]
 }

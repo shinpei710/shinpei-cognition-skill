@@ -26,7 +26,7 @@ Each skill directory should include:
 | `version.json` | Version, release date, status, and change history |
 
 Optional files are allowed when they reduce ambiguity, for example
-`model_cards.json`, `tone_rules.json`, or `templates/`.
+`model_cards.json`, `system_completeness.json`, `tone_rules.json`, or `templates/`.
 
 ## Design Principles
 

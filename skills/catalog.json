@@ -2,7 +2,7 @@
   "schema_version": "1.0",
   "repository": "shinpei710/shinpei-cognition-skill",
   "module_standard": "docs/module-spec.md",
-  "updated_at": "2026-05-14",
+  "updated_at": "2026-06-20",
   "modules": [
     {
       "name": "cognitive-operating-system",
@@ -34,6 +34,7 @@
         "workflow.yaml",
         "trigger_rules.json",
         "model_cards.json",
+        "system_completeness.json",
         "examples.json",
         "eval_cases.json",
         "failure_cases.json",

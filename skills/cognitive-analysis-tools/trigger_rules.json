@@ -4,7 +4,8 @@
     "The core operating skill has identified a need for deeper reasoning.",
     "There are multiple competing explanations or options.",
     "Risk, uncertainty, bias, bottlenecks, tradeoffs, or feedback loops materially affect the outcome.",
-    "A review, postmortem, or structured decision is needed."
+    "A review, postmortem, or structured decision is needed.",
+    "A product, workflow, or agentic system needs MVP, self-use, alpha, release, rollout, or completeness evaluation."
   ],
   "do_not_activate_when": [
     "The task is simple and direct.",
@@ -22,33 +23,83 @@
     {
       "category": "cognitive_calibration",
       "use_when": "Beliefs, assumptions, bias, weak evidence, or overconfidence matter.",
-      "typical_models": ["Occam's Razor", "Confirmation Bias", "Falsifiability", "Dunning-Kruger Effect", "Map Is Not Territory"]
+      "typical_models": [
+        "Occam's Razor",
+        "Confirmation Bias",
+        "Falsifiability",
+        "Dunning-Kruger Effect",
+        "Map Is Not Territory"
+      ]
     },
     {
       "category": "decision_optimization",
       "use_when": "Options, tradeoffs, prioritization, or cost matter.",
-      "typical_models": ["First Principles", "Inversion", "Second-Order Thinking", "Opportunity Cost", "Decision Matrix", "Safety Margin"]
+      "typical_models": [
+        "First Principles",
+        "Inversion",
+        "Second-Order Thinking",
+        "Opportunity Cost",
+        "Decision Matrix",
+        "Safety Margin"
+      ]
     },
     {
       "category": "system_diagnosis",
       "use_when": "Dependencies, incentives, bottlenecks, feedback, or stages matter.",
-      "typical_models": ["Systems Thinking", "Feedback Loop", "Bottleneck Theory", "Emergence", "Path Dependence", "Entropy"]
+      "typical_models": [
+        "Systems Thinking",
+        "Feedback Loop",
+        "Bottleneck Theory",
+        "Emergence",
+        "Path Dependence",
+        "Entropy"
+      ]
     },
     {
       "category": "uncertainty_handling",
       "use_when": "Probabilities, new evidence, rare shocks, or survival risk matter.",
-      "typical_models": ["Probability Thinking", "Bayesian Updating", "Survivorship Bias", "Black Swan", "Antifragility", "Ergodicity"]
+      "typical_models": [
+        "Probability Thinking",
+        "Bayesian Updating",
+        "Survivorship Bias",
+        "Black Swan",
+        "Antifragility",
+        "Ergodicity"
+      ]
     },
     {
       "category": "feedback_and_iteration",
       "use_when": "Review, correction, maintenance, or compounding matters.",
-      "typical_models": ["Compound Effect", "Regression to Mean", "Redundancy Backup", "Capability Emergence"]
+      "typical_models": [
+        "Compound Effect",
+        "Regression to Mean",
+        "Redundancy Backup",
+        "Capability Emergence"
+      ]
+    },
+    {
+      "category": "system_readiness",
+      "use_when": "MVP scope, self-use readiness, alpha testing, initial release, rollout, or product completeness standards matter.",
+      "typical_models": [
+        "Systems Thinking",
+        "Bottleneck Theory",
+        "Feedback Loop",
+        "Safety Margin",
+        "Opportunity Cost"
+      ]
     }
   ],
   "red_flags": [
     "The response lists many models without applying them.",
     "The model confirms a preferred story without checking alternatives.",
     "The analysis does not change the next action.",
-    "The model is treated as proof rather than a lens."
+    "The model is treated as proof rather than a lens.",
+    "Feature count is treated as product readiness.",
+    "Later-stage polish blocks current-stage evidence."
+  ],
+  "use_system_completeness_resource_when": [
+    "The user asks how complete a product or workflow must be for the next stage.",
+    "The task mentions MVP, self-use, alpha, beta, initial release, launch readiness, or rollout.",
+    "The main risk is abandonment, over-polishing, premature scaling, or unclear next milestone."
   ]
 }
