@@ -1,0 +1,38 @@
+{
+  "schema_version": "1.0",
+  "eval_cases": [
+    {
+      "id": "rejects-hype-driven-opc-conclusion",
+      "prompt": "A founder raised money with no employees and AI Agents doing everything. Should I immediately start my own one person company with a dozen Agents?",
+      "expected": [
+        "Marks the extreme case as weak evidence for direct action.",
+        "Separates inspiration from local decision evidence.",
+        "Checks human bottleneck, value loop, and service boundary.",
+        "Proposes a small reversible probe instead of immediate full commitment."
+      ],
+      "guards_against": "Using hype narratives as proof for risky personal action."
+    },
+    {
+      "id": "adds-management-layer-before-more-agents",
+      "prompt": "My three coding Agents, content Agent, and research Agent keep producing things, but I cannot keep up with reviewing them. Should I add more Agents?",
+      "expected": [
+        "Identifies human verification and integration as likely bottlenecks.",
+        "Recommends a management layer or review process before adding more execution Agents.",
+        "Defines acceptance criteria, context sync, and blocked task escalation.",
+        "Gives a minimal workflow change to test."
+      ],
+      "guards_against": "Scaling execution capacity when coordination is the constraint."
+    },
+    {
+      "id": "detects-high-touch-service-boundary",
+      "prompt": "People are paying for my AI tool, but every customer needs installation help, model setup, workflow customization, and ongoing debugging.",
+      "expected": [
+        "Names the high touch service boundary risk.",
+        "Checks whether the offer is software, service, or hybrid.",
+        "Suggests pricing, scope limits, support boundaries, or productization probes.",
+        "Avoids treating revenue alone as proof of scalable product fit."
+      ],
+      "guards_against": "Confusing paid usage with scalable product market fit."
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Agentic One Person Team"
+  short_description: "Evaluate AI powered one person teams"
+  default_prompt: "Use $agentic-one-person-team to judge this Agentic one person team idea."

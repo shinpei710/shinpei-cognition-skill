@@ -1,0 +1,37 @@
+{
+  "schema_version": "1.0",
+  "examples": [
+    {
+      "id": "article-to-personal-rules",
+      "input": "This OPC article makes me think I should build a company with AI employees. Which parts should I absorb into my system?",
+      "expected_behavior": [
+        "Separates article narrative from reusable rules.",
+        "Preserves human bottleneck, management layer, value loop, service boundary, and hype calibration rules.",
+        "Rejects extreme funding stories as weak decision evidence.",
+        "Suggests a narrow rule or skill module instead of bloating core operating principles."
+      ],
+      "response_shape": [
+        "what to preserve",
+        "what to ignore",
+        "where to preserve it",
+        "validation checks"
+      ]
+    },
+    {
+      "id": "multi-agent-product-idea",
+      "input": "I want to build an AI employee platform and let one management Agent direct five execution Agents for coding, content, sales, support, and research.",
+      "expected_behavior": [
+        "Checks whether the human bottleneck is direction, verification, or context integration.",
+        "Maps management and execution layers.",
+        "Runs adversarial partner questions about demand and support burden.",
+        "Proposes a minimal probe before building the full platform."
+      ],
+      "response_shape": [
+        "bottleneck diagnosis",
+        "layer map",
+        "value loop risk",
+        "minimal probe"
+      ]
+    }
+  ]
+}

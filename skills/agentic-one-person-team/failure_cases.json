@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.0",
+  "failure_cases": [
+    {
+      "id": "hype-to-action-leap",
+      "symptom": "The answer turns an extreme OPC story into a recommendation for the user to start a full AI company immediately.",
+      "risk": "The user acts on weak evidence and overcommits time, money, or identity.",
+      "recovery": "Label the story as narrative evidence, require local facts, and design a reversible probe."
+    },
+    {
+      "id": "agent-count-fixation",
+      "symptom": "The answer focuses on adding or naming more Agents while ignoring decision, verification, and integration costs.",
+      "risk": "The workflow produces more output while the human bottleneck worsens.",
+      "recovery": "Diagnose the human bottleneck and add a management layer or acceptance criteria before increasing execution capacity."
+    },
+    {
+      "id": "demo-business-confusion",
+      "symptom": "The answer treats a working prototype or impressive Agent demo as proof of a business.",
+      "risk": "The user builds infrastructure before validating demand, payment, retention, or delivery cost.",
+      "recovery": "Run the value loop check and choose the smallest demand or delivery probe."
+    },
+    {
+      "id": "hidden-service-load",
+      "symptom": "The answer calls a high touch support workflow automation without naming installation, customization, maintenance, or customer success load.",
+      "risk": "The user loses freedom and focus while believing the business is scalable software.",
+      "recovery": "Classify the offer as software, service, hybrid, or productized service. Add price, scope, support, and escalation boundaries."
+    }
+  ]
+}

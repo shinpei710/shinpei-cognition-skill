@@ -1,0 +1,52 @@
+schema_version: "1.0"
+workflow:
+  - id: define_context
+    name: Define the Agentic team context
+    actions:
+      - Identify whether the task is about capability building, product validation, cash flow, workflow design, or expansion.
+      - Record the user's current stage, constraints, and desired outcome.
+    checkpoint: A one sentence problem definition with stage and success criteria.
+  - id: separate_evidence
+    name: Separate facts from narrative
+    actions:
+      - Label facts, assumptions, unknowns, trend narratives, and test results.
+      - Mark extreme cases, funding stories, or automation claims as weak evidence unless verified.
+    checkpoint: Evidence table or compact bullet list.
+  - id: diagnose_human_bottleneck
+    name: Diagnose the human bottleneck
+    actions:
+      - Check direction judgment, prioritization, task decomposition, context transfer, verification, integration, emotional load, and cash flow.
+      - Identify the highest weight bottleneck before recommending more Agents.
+    checkpoint: One primary bottleneck and one secondary bottleneck.
+  - id: map_team_layers
+    name: Map the one person team layers
+    actions:
+      - Define the human decision layer.
+      - Define the management Agent or management process.
+      - Define execution Agents with acceptance criteria.
+      - Define external organization needs.
+    checkpoint: Layer map with responsibilities and escalation paths.
+  - id: run_adversarial_partner
+    name: Run adversarial partner check
+    actions:
+      - Ask why the idea might fail.
+      - Check opportunity cost, missing demand evidence, delivery fragility, support burden, and switching cost.
+    checkpoint: Top risks and what evidence would reduce them.
+  - id: verify_value_loop
+    name: Verify value loop and service boundary
+    actions:
+      - Check target user, pain strength, current workaround, willingness to pay, delivery cost, retention, and referral path.
+      - Check whether the product becomes setup, customization, maintenance, or customer success labor.
+    checkpoint: Value loop status and service boundary risk level.
+  - id: choose_probe
+    name: Choose smallest probe
+    actions:
+      - Design the smallest test that can validate demand, delivery cost, acquisition, or service boundary.
+      - Define continue conditions, stop conditions, and review cadence.
+    checkpoint: Probe plan with measurable verification signal.
+  - id: preserve_learning
+    name: Preserve useful learning
+    actions:
+      - Convert repeated traps into a rule, checklist, eval case, or failure case.
+      - Avoid preserving one off anecdotes as universal rules.
+    checkpoint: Reusable lesson or explicit decision to skip preservation.

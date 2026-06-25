@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.0",
+  "activate_when": [
+    "The task mentions one person company, OPC, one person team, solo founder, indie hacker, or independent maker strategy.",
+    "The task involves AI employees, Agent teams, multi Agent workflows, management Agents, or automated company operations.",
+    "The user is judging an AI product or personal commercial experiment where execution is easy but validation, delivery, support, or cash flow is uncertain.",
+    "The discussion includes extreme automation, funding, valuation, or no employee company stories that could create over inference."
+  ],
+  "do_not_activate_when": [
+    "The task is a routine coding, formatting, or factual task with no Agentic team, product, or business judgment.",
+    "The user only asks for a neutral summary of an article and does not need personal decision support.",
+    "The issue is an enterprise organization design problem with no personal or small AI native team constraint."
+  ],
+  "route_to_analysis_tools_when": [
+    "The product needs stage gates, system completeness checks, risk comparison, or deeper tradeoff analysis.",
+    "There are multiple strategic options and the cost of choosing wrong is high."
+  ],
+  "route_to_scenario_tools_when": [
+    "The bottleneck is human collaboration, negotiation, trust, communication, or external resource coordination."
+  ],
+  "caution_rules": [
+    "Do not use extreme funding or valuation cases as direct evidence for the user's project.",
+    "Do not recommend adding Agents until the main human bottleneck and acceptance criteria are clear.",
+    "Do not treat a working demo as proof of a business loop.",
+    "Do not hide high touch support, deployment, customization, or customer success labor under the word automation."
+  ],
+  "required_checks": [
+    "human_bottleneck",
+    "agent_management_layer",
+    "value_loop",
+    "service_boundary",
+    "external_organization",
+    "adversarial_partner",
+    "minimal_probe"
+  ]
+}

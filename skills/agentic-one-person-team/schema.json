@@ -1,0 +1,68 @@
+{
+  "schema_version": "1.0",
+  "input_contract": {
+    "required_context": [
+      "goal_or_idea",
+      "current_stage",
+      "known_evidence",
+      "agent_or_tool_setup",
+      "human_constraints"
+    ],
+    "optional_context": [
+      "target_user",
+      "current_workaround",
+      "pricing_or_cashflow",
+      "delivery_process",
+      "support_load",
+      "external_collaborators",
+      "time_budget",
+      "risk_tolerance"
+    ],
+    "evidence_labels": [
+      "fact",
+      "assumption",
+      "unknown",
+      "narrative",
+      "test_result"
+    ]
+  },
+  "output_contract": {
+    "required_sections": [
+      "facts_and_assumptions",
+      "hype_or_over_inference_risk",
+      "human_bottleneck_diagnosis",
+      "agent_team_structure",
+      "value_loop_check",
+      "service_boundary_check",
+      "external_organization_needs",
+      "adversarial_partner_questions",
+      "minimal_probe",
+      "continue_and_stop_conditions",
+      "verification_signal"
+    ],
+    "allowed_decisions": [
+      "continue_with_probe",
+      "pause_for_evidence",
+      "simplify_scope",
+      "add_management_layer",
+      "define_service_boundary",
+      "seek_external_resources",
+      "drop_or_archive"
+    ]
+  },
+  "preservation_contract": {
+    "preserve_when": [
+      "A repeated Agent workflow bottleneck is discovered.",
+      "A value loop or service boundary rule becomes reusable.",
+      "A hype narrative caused over inference or poor prioritization.",
+      "A minimal probe reveals a useful decision rule."
+    ],
+    "preserve_as": [
+      "rule",
+      "checklist",
+      "eval_case",
+      "workflow_template",
+      "failure_case"
+    ]
+  }
+}

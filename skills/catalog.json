@@ -2,7 +2,7 @@
   "schema_version": "1.0",
   "repository": "shinpei710/shinpei-cognition-skill",
   "module_standard": "docs/module-spec.md",
-  "updated_at": "2026-06-20",
+  "updated_at": "2026-06-26",
   "modules": [
     {
       "name": "cognitive-operating-system",
@@ -60,6 +60,25 @@
         "version.json"
       ],
       "load_policy": "Load only when a concrete human, social, communication, collaboration, or growth scenario needs specialized lenses."
+    },
+    {
+      "name": "agentic-one-person-team",
+      "layer": 3,
+      "role": "agentic_personal_team_judgment",
+      "path": "skills/agentic-one-person-team",
+      "entrypoint": "SKILL.md",
+      "resources": [
+        "description.md",
+        "schema.json",
+        "workflow.yaml",
+        "trigger_rules.json",
+        "decision_checklist.json",
+        "examples.json",
+        "eval_cases.json",
+        "failure_cases.json",
+        "version.json"
+      ],
+      "load_policy": "Load only when judging AI Agent powered one person teams, OPC ideas, multi Agent workflows, indie AI products, or personal commercial experiments."
     }
   ]
 }

@@ -32,6 +32,7 @@ Default loop:
 
 Use `cognitive-analysis-tools` only when deeper model-based reasoning is needed. Load `system_completeness.json` for product stage gates or system completeness checks.
 Use `cognitive-scenario-tools` only after general analysis identifies a concrete domain such as relationship, negotiation, communication, organization, personal growth, or strategy.
+Use `agentic-one-person-team` only when judging AI Agent powered one person teams, OPC ideas, multi Agent workflows, indie AI products, or personal commercial experiments. Keep it out of the core operating layer so Agentic business checks load only when relevant.
 Do not load all models by default. Keep the core light and call tools on demand.
 When modifying skills, update the structured resources beside `SKILL.md`: schema, workflow, trigger rules, examples, eval cases, failure cases, and version record.
 ```

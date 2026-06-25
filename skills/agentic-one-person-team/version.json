@@ -1,0 +1,14 @@
+{
+  "schema_version": "1.0",
+  "module": "agentic-one-person-team",
+  "version": "0.1.0",
+  "status": "draft",
+  "updated_at": "2026-06-26",
+  "changes": [
+    {
+      "version": "0.1.0",
+      "date": "2026-06-26",
+      "summary": "Initial scenario skill for AI Agent powered one person teams, human bottlenecks, value loops, service boundaries, external organization, and hype calibration."
+    }
+  ]
+}

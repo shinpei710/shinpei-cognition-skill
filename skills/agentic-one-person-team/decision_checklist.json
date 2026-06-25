@@ -1,0 +1,74 @@
+{
+  "schema_version": "1.0",
+  "checklists": [
+    {
+      "id": "human_bottleneck",
+      "name": "Human bottleneck check",
+      "questions": [
+        "Is direction judgment clear enough for Agents to execute?",
+        "Are tasks decomposed with acceptance criteria?",
+        "Can context move between Agents without constant human translation?",
+        "Can the human verify and integrate outputs fast enough?",
+        "Is emotional load or cash flow pressure distorting decisions?"
+      ],
+      "decision_rule": "If the human cannot judge, verify, or integrate outputs, fix the management system before adding more Agents."
+    },
+    {
+      "id": "agent_management_layer",
+      "name": "Agent management layer check",
+      "questions": [
+        "Are there more than two execution Agents or more than two functional domains?",
+        "Who owns task queue, context sync, risk summary, and blocked task escalation?",
+        "How does the human see progress without being interrupted by every subtask?",
+        "What is the review cadence and output format?"
+      ],
+      "decision_rule": "When coordination cost rises, add a management layer or process before expanding execution capacity."
+    },
+    {
+      "id": "value_loop",
+      "name": "Value loop check",
+      "questions": [
+        "Who has the pain?",
+        "How do they solve it now?",
+        "What evidence shows the pain is strong enough?",
+        "Will they pay, switch, or repeatedly use the product?",
+        "Can delivery cost stay below the value captured?"
+      ],
+      "decision_rule": "If the value loop is unproven, run a demand or delivery probe before building a larger Agent architecture."
+    },
+    {
+      "id": "service_boundary",
+      "name": "Service boundary check",
+      "questions": [
+        "Does each customer need hand holding, installation, or environment debugging?",
+        "Do third party model, tool, or platform updates create support debt?",
+        "Is customization becoming the main product?",
+        "Does paid usage create ongoing result responsibility that the human must absorb?",
+        "Will short term revenue consume the time needed for the main product?"
+      ],
+      "decision_rule": "If support and customization dominate, name the offer as service, hybrid, or productized service, then price and bound it deliberately."
+    },
+    {
+      "id": "external_organization",
+      "name": "External organization check",
+      "questions": [
+        "Who can provide real user feedback?",
+        "Who can test the product in a real workflow?",
+        "Who can supply distribution, customers, domain context, legal, finance, or operations support?",
+        "Which missing resource cannot be replaced by Agents yet?"
+      ],
+      "decision_rule": "A one person team still needs outside reality contact. Build a lightweight external resource map."
+    },
+    {
+      "id": "hype_calibration",
+      "name": "Hype calibration check",
+      "questions": [
+        "Which claims are verified facts?",
+        "Which claims are trend narratives or founder stories?",
+        "Would the same decision still make sense without the extreme case?",
+        "What small test can produce local evidence for this user?"
+      ],
+      "decision_rule": "Use extreme cases as inspiration only. Make decisions from local evidence and reversible probes."
+    }
+  ]
+}

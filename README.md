@@ -73,6 +73,14 @@ See `docs/module-spec.md` for the repository standard and
   - Load it only after the general analysis layer identifies a scenario
     where specialized models improve action.
 
+
+## Specialized Scenario Module
+
+- `agentic-one-person-team`
+  - Helps judge AI Agent powered one person teams, OPC ideas, multi Agent workflows, indie AI products, and personal commercial experiments.
+  - Load it only for Agentic personal team or indie AI product judgment, after the core operating skill has defined the problem.
+  - Keeps human bottlenecks, management layers, value loops, service boundaries, external organization, and hype calibration outside the core operating layer.
+
 ## Recommended Codex Usage
 
 把下面这段放进项目的 `AGENTS.md` 或 Codex 的项目说明里：
